@@ -1,0 +1,732 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+        <script type="text/javascript">
+            var currentControllerName = 'Home';
+            var appPath = '';
+            var isPannelClosed = 'False';
+
+            window.history.forward();
+            function preventBack() { window.history.forward(1); }
+        </script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Page-Exit" content="Alpha(opacity=100)">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta content="BlendTrans(Duration=0.1)" http-equiv="Page-Exit">
+    <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>UploadImages</title>
+
+    <script type="text/javascript" src="../Scripts/jquery-1.11.3.min.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/jquery-migrate-1.2.1.min.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui-1.11.4.min.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/jquery.unobtrusive-ajax.min.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/jquery.validate.min.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/jquery.validate.unobtrusive.min.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/jquery.wresize.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/i18n/grid.locale-en.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/jquery.jqgrid.min.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/jquery.alerts.js?.V1.0"></script>
+
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js?.V1.0"></script> 
+    <script type="text/javascript" src="../Scripts/select2.min.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/jquery.transition.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/modernizr-2.8.3.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/smoothzoom.min.js?.V1.0"></script>
+
+
+    <script type="text/javascript" src="../Scripts/dv/overlayext.js?.V1.0"></script>
+    <script type="text/javascript" src="../Scripts/dv/common.js?.V1.0"></script>
+    <link rel="stylesheet" type="text/css" href="../Content/themes/base/all.css?.V1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/css/font-awesome.min.css?.V1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/site.css?.V1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/bootstrap.min.css?.V1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/main.min.css?.V1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/extra.min.css?.V1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/css/select2.min.css?.V1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/jquery.jqgrid/ui.jqgrid.css?.V1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/jquery.alerts.css?.V1.0">
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('img').smoothZoom({
+                zoominSpeed: 800, // Time (in milliseconds) the zoom-in lasts
+                zoomoutSpeed: 400, // Time (in milliseconds) the zoom-out lasts
+                resizeDelay: 400, // Check if window resized every X milliseconds
+                zoominEasing: 'easeOutExpo', // jQuery easing method on zoom-in (requires easing plugin)
+                zoomoutEasing: 'easeOutExpo' // jQuery easing method on zoom-out (requires easing plugin)
+            });
+        });
+
+        (function (global) {
+            if (typeof (global) === "undefined") {
+                throw new Error("window is undefined");
+            }
+
+            var _hash = "!";
+            var noBackPlease = function () {
+                global.location.href += "#";
+                global.setTimeout(function () {
+                    global.location.href += "!";
+                }, 50);
+            };
+
+            global.onhashchange = function () {
+                if (global.location.hash !== _hash) {
+                    global.location.hash = _hash;
+                }
+            };
+
+            global.onload = function () {
+                noBackPlease();
+                document.body.onkeydown = function (e) {
+                    var elm = e.target.nodeName.toLowerCase();
+                    if (e.which === 8 && (elm !== 'input' && elm !== 'textarea')) {
+                        e.preventDefault();
+                    }
+                    e.stopPropagation();
+                };
+            };
+        })(window);
+    </script>
+
+    <style>
+        .helpLine {
+            text-align: left !important;
+            float: left;
+            color: #ffffff;
+            font-size: 13px !important;
+        }
+
+        .helpLine {
+            text-align: right;
+            float: right;
+            color: #fffcb8;
+            font-size: 11px;
+            line-height: 16px !important;
+        }
+    </style>
+</head>
+<body onload="preventBack();" onpageshow="if (event.persisted) preventBack();" onunload="" oncontextmenu="return false;">
+
+<div id="Helpline" class="modal fade" role="dialog" style="z-index:99999;">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin-top: 165px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><strong>Helpline Number (Timings: 9:30 AM to 6:00 PM - Monday to Saturday)</strong></h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped table-responsive table-bordered">
+                    <tr>
+                        <td>8510010247</td>
+                        <td>9582949110</td>
+                        <td>7065585225</td>
+                        <td>7840012226</td>
+                    </tr>
+                    <tr>
+                        <td>8744002281</td>
+                        <td>7065512112</td>
+                        <td>7065585226</td>
+                        <td>7327898325</td>
+                    </tr>
+                    <tr></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="noNav navbar-fixed-top">
+    <div class="container">
+        <figure class="logo">
+            <span class="img">
+                <img id="imgCollegeLogo" src="../Images/CollegeLogo.jpg" style="height: 36px; width: 36px; border-width: 0px;">
+            </span>
+            <figcaption>All India Institute Of Medical Sciences<span id="lblCollegeName" class="hide"></span></figcaption>
+        </figure>
+        
+    </div>
+    <div class="botWrapper">
+        <div class="container">
+            <div style="height: 35px">
+                <div class="row">
+                    <div class="col-sm-6">
+                        
+                    </div>
+                    <div class="col-sm-6">
+                        <span class="helpLine">
+                            
+                            <span style="color: #ffffff; font-weight: bold; font-size: 12px; ">Toll Free Number: 1800117898,<br>(Timings: 9:30 AM to 5:00 PM - Monday to Friday & 09:30 AM to 01:00 PM - Saturday)</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                    <input type="hidden" id="hdnStudentId" value="0">
+                    <input type="hidden" id="hdnCurrentStudentId" value="">
+                    <input type="hidden" id="hdnIsReOpen" value="">
+                     <input type="hidden" id="hdnAppliedPostId" value="">
+
+<style type="text/css">
+    .panel-group .panel-heading a:after {
+        content: '-';
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+
+    .panel-group .panel-heading a.collapsed:after {
+        content: '+';
+    }
+
+    .panel-default > .panel-heading {
+        color: #000;
+        /* border-color: #9E0000 !important; */
+        background: #EAE8E8;
+        position: relative;
+        border: 1px solid #C5C5C5;
+    }
+
+    .panelNav {
+        background: #fff !important;
+        border: 1px solid #fff !important;
+        border-radius: 2px;
+        padding: 2px 3px;
+    }
+
+    .panel-body {
+        padding: 0px;
+    }
+
+        .panel-body ul {
+        }
+
+            .panel-body ul li {
+                font-size: 11px !important;
+                margin-bottom: 0px !important;
+            }
+
+                .panel-body ul li a {
+                    font-size: 11px;
+                    color: #2a6496;
+                }
+
+    .collapsed {
+        color: #428bca !important;
+    }
+
+    /*.lPanel nav ul li {
+        background: #fff !important;
+       
+        border-radius: 2px;
+        padding: 1px 3px;
+        margin-bottom: 5px;
+        line-height: 20px;
+        font-size: 14px !important;
+    }*/
+
+        .lPanel nav ul li a {
+            padding: 0px;
+        }
+
+    .panel-group {
+        margin-bottom: 6px;
+    }
+
+    .panel-title {
+  
+          }
+
+    .panel-title span {
+         font-size:14px !important;
+    }
+
+    .panel-default > .panel-heading {
+        color: #000;
+        /* border-color: #9E0000 !important; */
+        background: #EAE8E8;
+        position: relative;
+        border: 1px solid #C5C5C5;
+    }
+</style>
+
+
+
+<div class="lPanel">
+    <nav>
+        <h2>General Links</h2>
+        <aside class="pointer"><span></span></aside>
+
+       
+    <ul>
+        <li><a href="http://aiimsexams.ac.in/index.html" class="clsLink">Home</a></li>
+        <li><a href="Notification.html">Notification</a></li>
+
+        <li><a href="../sites/CRE-AIIMS_Advertisement_v7.pdf" class="clsLink" target="_blank">Advertisement</a></li>
+
+        <li><a href="../pdf/Introduction.pdf" target="_blank" class="clsLink">Introduction</a></li>
+
+
+        <li><a href="UploadImages.html" class="clsLink">Upload Images Instructions</a></li>
+
+        <li><a href="#" target="_blank" class="clsLink">User Manual</a></li>
+
+        <li><a href="../Login.html" class="clsLink">Registration/Login</a></li>
+        
+
+
+
+        <!--<li><a class="disabled" href="javascript:void(0)">Admit Card</a></li>-->
+        <!--<li><a class="disabled" href="javascript:void(0)">Result</a></li>-->
+
+
+    </ul>
+    </nav>
+</div>
+
+            </div>
+            <div class="col-sm-10">
+                <div class="cPanel1">
+                    <div class="contPart">
+                        <div class="cpLeftPanelMaster">
+                            <div class="status" id="status">
+                                <div class="head-line DM-head-line">
+                                </div>
+                                <div class="aLine"></div>
+                                <div class="statusBar DMstatusBar">
+                                    <ul>
+                                        <li>
+                                                <a class="liLink" id="a1">
+                                                    <div id="tbRegistration" class="icon">
+                                                        1
+                                                    </div>
+                                                    <div class="detail">
+                                                        Registration<br>
+                                                        <span></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a class="liLink" id="a2">
+                                                    <div id="tbQualification" class="icon">
+                                                        2
+                                                    </div>
+                                                    <div class="detail">
+                                                        Qualification & Address Details<br>
+                                                        <span></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a class="liLink" id="a3">
+                                                    <div id="tbExperience" class="icon">
+                                                        3
+                                                    </div>
+                                                    <div class="detail">
+                                                        Experience Details<br>
+                                                        <span></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a class="liLink" id="a4">
+                                                    <div id="tbPayment" class="icon">
+                                                        4
+                                                    </div>
+                                                    <div class="detail">
+                                                        Make Payment<br>
+                                                        <span></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a class="liLink" id="a5">
+                                                    <div id="tbCenterChoice" class="icon">
+                                                        5
+                                                    </div>
+                                                    <div class="detail">
+                                                        City Choice<br>
+                                                        <span></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a class="liLink" id="a6">
+                                                    <div id="tbUploadImages" class="icon">
+                                                        6
+                                                    </div>
+                                                    <div class="detail">
+                                                        Upload Images<br>
+                                                        <span></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a class="liLink" id="a7">
+                                                    <div id="tbRegistrationSlip" class="icon">
+                                                        7
+                                                    </div>
+                                                    <div class="detail">
+                                                        Print Application Form<br>
+                                                        <span></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <input type="hidden" id="hdnIsAdmin" value="0">   
+                            <div id="dvWrapper">
+                                
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#status").hide();
+    });
+</script>
+
+<style type="text/css">
+    .panel-group .panel-heading a:after {
+        content: '-';
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+
+    .panel-group .panel-heading a.collapsed:after {
+        content: '+';
+    }
+
+    .panel-default > .panel-heading {
+        color: #000;
+        /* border-color: #9E0000 !important; */
+        background: #EAE8E8;
+        position: relative;
+        border: 1px solid #C5C5C5;
+    }
+</style>
+
+<div class="innerSection">
+    <h3>How to Upload Images</h3>
+    <p style="font-size: 15px">
+        <strong><u>Instructions for creating and uploading of Images of Photograph, Signature and Thumb-print</u></strong>
+    </p>
+    <p><strong>Uploading of digital Images of Photograph, Signature and Thumb-print is mandatory. Read and follow the instructions given below to avoid inconvenience and rejection of application form due to uploading of improper digital images. </strong></p>
+
+    <p>
+        <strong>
+            Prepare the digital images in advance to avoid delays/inconvenience while filling the online application form.
+        </strong>
+    </p>
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" style="display: block; padding: 1px;">
+                        <span style="font-size: 14px;">Instruction for preparing digital image of Photo</span>
+                    </a>
+                </h4>
+            </div>
+            <!--/.panel-heading -->
+            <div id="collapseSeven" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                    <div class="bor1pxSolid" style="padding: 10px;">
+                        <p>Digital image of  your photo can be made in two ways</p>
+                        <ol style="list-style-type:upper-alpha;">
+                            <li>Clicking your photo using a  digital device (camera etc)</li>
+                            <li>Scanning of already available  photograph</li>
+                        </ol>
+                        <ol style="list-style-type:upper-alpha;">
+                            <li><strong>Click  a photo using a digital device</strong></li>
+                            <p>1. <strong>Clicking your photo</strong></p>
+                            <ol style="list-style-type:lower-alpha;">
+                                <li>Stand/sit against a <strong>white background</strong>. </li>
+                                <li>Click colour photograph in <strong>bright light</strong> using any digital device  (preferably with &gt; 5 megapixel resolution). Avoid using flash as it tends to  create a shadow on the white background.</li>
+                                <li>Look straight into the camera  (to avoid angulation of face). </li>
+                                <li>Ensure that your eyes and both  ears are clearly visible on the photograph.</li>
+                            </ol>
+                            <p>2. <strong>Editing of digital photograph</strong></p>
+                            <ol style="list-style-type:lower-alpha;">
+                                <li><strong>Transfer</strong> the photograph from the digital  device to a computer/laptop.</li>
+                                <li><strong>Crop</strong> the  photograph such that your head, shoulders are visible and occupy most of the  image. </li>
+                                <li><strong>Resize</strong> the  image to 50 â€“ 100 Kb (maintain aspect ratio, i.e. height and width ratio to  avoid distortion of image)</li>
+
+                                <img src="../Images/photo1.jpg">
+
+                            </ol>
+                            <br>
+                            <li>
+                                <strong>Scanning of already available photograph</strong><br>
+                            </li>
+                            In case you already have a professionally clicked passport size colour photograph follow the following procedure to prepare scanned image of the same.
+                            <br>
+                            <br>
+                            <p>1. <strong>Before you scan the photograph ensure that</strong></p>
+                            <ol style="list-style-type:lower-alpha;">
+                                <li>Photo has been taken against a white background without a border and clearly shows your face, eyes and both ears.</li>
+                                <li>The photograph is of standard passport size (3.5 cm X 4.5 cm, width X height)</li>
+                                <li>The photograph is recent (within 6 months of online application). </li>
+                            </ol>
+                            <p>2. <strong>Scanning of passport size photograph</strong></p>
+                            <ol style="list-style-type:lower-alpha;">
+                                <li>Draw a Box of 3.5 horizontal and 4.5 vertical size (3.5 cm x 4.5 cm) on a white sheet of paper using a pencil.
+                                <li>Paste the photograph in the box drawn.</li>
+                                <li>Put the paper with photograph in the scanner and scan only the box with photograph (do not scan the whole sheet of white paper). Set the scanning to 200 dpi and scan the photograph. During scanning most software allows selection of the desired area for final scanning after initial preview & scan. </li>
+                                <li>Save the scanned images as jpg/jpeg/gif/png as â€œPhotograph.jpgâ€ or â€œPhotograph.jpegâ€ or â€œPhotograph.gifâ€ or â€œPhotograph.pngâ€</li>
+                                <li>Resize the scanned image to 50 â€“ 100 Kb. Use any image editing software to size the image. Maintain the aspect ratio (i.e. relationship of height vs width while resizing) </li>
+
+                                <img src="../Images/photo2.jpg">
+
+                            </ol>
+                            <p> <strong>Checklist before uploading digital image of photo </strong></p>
+                            <ol style="list-style-type:lower-alpha;">
+                                <li>1.	Photograph is in colour with white background.</li>
+                                <li>Your face is clearly visible. </li>
+                                <li>Size of the image is between 50-100 kb.</li>
+                                <li>Image is in .jpg/.jpeg/.gif/.png format. </li>
+                                <li>Image is not blurred in the process of editing. </li>
+
+                            </ol>
+
+                            <p> <strong><u>Please note the common reasons for rejecting photographs are : </u></strong></p>
+                            <ol style="list-style-type:lower-alpha;">
+                                <li>Background is not white.</li>
+                                <li>Image is blurred</li>
+                                <li>Whole sheet is scanned such that the photograph is occupying only a small portion of the  frame.</li>
+                                <li>Photograph taken casually with dark glasses/full length/group/side profile etc.</li>
+                               
+
+                            </ol>
+
+
+                        </ol>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--/.panel-collapse -->
+        </div>
+        <!-- /.panel -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" style="display: block; padding: 1px;">
+                        <span style="font-size: 14px;">Instruction for preparing digital image of signature</span>
+                    </a>
+                </h4>
+            </div>
+            <!--/.panel-heading -->
+            <div id="collapseEight" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                    <div class="bor1pxSolid" style="padding: 10px;">
+                        <p><strong><u>Instruction for preparing digital image of signature</u></strong></p>
+
+                        <p><strong>Putting signature inside a box on a white sheet</strong></p>
+
+                        <ul>
+                            <li>Draw a box of 3 cm x 6 cm (width*height) on a white paper sheet with a pencil. </li>
+                            <li>Take a thick tip black/blue ink pen (preferably fountain pen). </li>
+                            <li>The person who will be appearing in the examination should sign within the drawn box (full signature). </li>
+                            <li>
+                                Following kind of signatures are <strong>NOT</strong> acceptable:
+                                <img src="../Images/sig1.jpg">
+                            <li>â»	Signature containing Initials only</li>
+                            <li>â»	Signature in CAPITAL LETTERS</li>
+                            <li>â»	Signature with overwriting</li>
+                            
+                        </ul>
+
+                        <p><strong>Digital image of your Signature can be made in two ways</strong></p>
+                        <ol>
+                            <li>Using a digital device to directly image (i.e. camera)</li>
+                            <li>Scanning the signature</li>
+                        </ol>
+
+                        <ol>
+                            <strong>A.	Preparing digital image of signature using a digital device (camera)</strong>
+                            <ol style="margin-top: 12px; line-height: 22px; ">
+                                <li><strong>Clicking image of signature using a digital device.</strong></li>
+                                <ul style="list-style-type:upper-alpha;">
+                                    <li>Click the signature within the box in bright light conditions using any digital device (preferably with > 5 megapixel resolution). Avoid using flash. </li>
+                                    <li>Check the shadow of your hands/camera/smartphone etc. does not fall on the sheet. </li>
+                                    <li>Click the image and check that it is not blurred due to low light conditions or shaking of hands.</li>
+
+
+                                    <img src="../Images/sig2.jpg">
+                                </ul>
+                                <li><strong>Editing digital image of the signature</strong></li>
+                                <ul>
+                                    <li>Transfer the digital image to a computer/laptop.
+                                    <li>
+                                    <li>If required, use auto-correct feature of image editing software so that the signature is clear against a white background.
+                                    <li>
+                                    <li>Crop the image such that borders of box are reached.
+                                    <li>
+                                    <li>Resize the image to 20 â€“ 100 Kb (maintain aspect ratio, i.e. height and width ratio to avoid distortion of image)
+                                    <li>
+                                </li></ul>
+                            </ol>
+                        </ol>
+                        
+                        <ol style="margin-top: 12px; line-height: 22px; ">
+                            <li><strong>Scanning the signature</strong></li>
+                            <ol style="font-weight: normal;">
+                                <li>Set the scanner to 200 dpi and scan only the box with signature (DO NOT scan the whole sheet)</li>
+                                <li>Save the scanned signature as .jpg/.jpeg/.gif/.png image.</li>
+                                <li>Re-size the image to 20 to 100 Kb. Size of the image can be checked by right click on the image and then go to â€œPropertiesâ€ link. (Click here to know how to resize a scanned image)</li>
+
+                                <img src="../Images/sig3.jpg">
+
+                            </ol>
+                        </ol>
+                        <p><strong><u>Checklist  before uploading digital of signature</u></strong></p>
+                        <ol style="font-weight: normal; line-height:20px;">
+                            <li>Signature is clear and without  overwriting and against white background</li>
+                            <li>Image size is between 20 to 100  Kb</li>
+                            <li>Image is in .jpg/.jpeg/.gif/.png format. </li>
+                            <li>Image is not blurred in the process of editing. </li>
+
+                        </ol>
+                        <p><strong><u>Please note the common reasons for rejecting Signature are:</u></strong></p>
+                        <ol style="font-weight: normal; line-height:20px;">
+                            <li>Background is not white</li>
+                            <li>Image is blurred.</li>
+                            <li>Whole sheet is scanned such that the signature is occupying only a small portion of    the frame.</li>
+                           
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" style="display: block; padding: 1px;">
+                        <span style="font-size: 14px;">Instruction for preparing digital image of Thumbprint</span>
+                    </a>
+                </h4>
+            </div>
+            <!--/.panel-heading -->
+            <div id="collapseNine" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                    <div class="bor1pxSolid" style="padding: 10px;">
+                        <p><strong><u>Instruction for preparing digital image of thumb print</u></strong></p>
+                        Taking a thumb-print
+                        <p>
+                            1.  Draw a box of 4 cm x 3 cm (width x height) on a white sheet of paper (you may draw more than 1 box to take multiple thumb print and select the best).<br>
+                            2.  Use a fresh blue/black colour ink pad.<br>
+                            3.  Clean your hands and dry them before you begin (oil/dirt can obscure the prints)<br>
+                            4.  Gently press your left thumb against the ink pad and take a horizontal print of your left thumb within the box. Do not press too much or wriggle as it may lead to smudging of print. Preferably take impressions of thumb in more than box.<br>
+                            5. 	Choose the thumb print that clearly shows the lines of your entire thumb. <br>
+
+
+                            <img src="../Images/thumb1.jpg">
+                        </p>
+                        <p><strong>Preparing digital image of thumb-print  using a digital device (camera/smart phone etc)</strong></p>
+
+                        <ol style="font-weight: normal; line-height:20px;">
+                            <li><strong>Clicking image of thumb-print  using a digital device.</strong></li>
+                            <ul>
+                                <li>Click the image in <strong>bright light conditions</strong> using any  digital device (preferably with &gt; 5 megapixel resolution). Avoid using  flash. </li>
+                                <li>Check the shadow of your  hands/camera/smartphone etc. does not fall on the sheet. </li>
+                                <li>Click the image and check that  it is not blurred due to low light conditions or shaking of hands. </li>
+
+                                <img src="../Images/thumb2.jpg">
+
+                            </ul>
+                            <li><strong>Editing digital image of  the signature</strong></li>
+                            <ul>
+                                <li>Transfer the digital image to a  computer/laptop. </li>
+                                <li>If required, use <strong>auto-correct feature</strong> of image editing  software so that the signature is clear against a white background.</li>
+                                <li><strong>Crop</strong> the  image such that borders of box are reached. </li>
+                                <li><strong>Resize</strong> the  image to 20 â€“ 100 Kb (maintain aspect ratio, i.e. height and width ratio to  avoid distortion of image)</li>
+
+
+                                <img src="../Images/thumb3.jpg">
+                            </ul>
+                        </ol>
+
+                        <p><strong>Preparing digital image of  thumb-print using a scanner</strong></p>
+                        <ol style="font-weight: normal; line-height:20px;">
+                            <li>Set the scanner to 200 dpi and  scan only the box with signature (DO NOT scan the whole sheet)</li>
+                            <li>Save the scanned image of  thumb-print as&nbsp;.jpg/.jpeg/.gif/.png&nbsp;image.&nbsp;</li>
+                            <li>Re-size the image to 20 to 100  Kb. Size of the image can be checked by right click on the image and then go to  &ldquo;Properties&rdquo; link. (<a href="http://mbbs.aiimsexams.ac.in/pdf/resizingtheimage.pdf" target="_blank"><strong>Click here</strong></a>&nbsp;to know how to resize a scanned image)</li>
+                        </ol>
+                        <p><u>Checklist  before uploading digital image of thumb-print</u></p>
+                        <ol style="font-weight: normal; line-height:20px;">
+                            <li>Thumb-print and lines are  clearly visible against white background</li>
+                            <li>Image size is between 20 to 100  Kb</li>
+                            <li>Image is in .jpg/.jpeg/.gif/.png format. </li>
+                            <li>Image is not blurred in the process of editing. </li>
+                        </ol>
+                        <p><u>Common Reason for rejection of Left Thumb Impression </u></p>
+                        <ol style="font-weight: normal; line-height:20px;">
+                            <li>Background is not white.</li>
+                            <li>Image is blurred.</li>
+                            <li>Whole sheet is scanned such that the Thumb Print is occupying only a small portion of the frame. </li>
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+
+    <p><strong>Before starting you should have:</strong></p>
+    <ol>
+        <li>Read the Prospectus and Help  Manual</li>
+        <li>Have a valid Mobile Phone and  e-mail id which you use</li>
+        <li>Must have the correct Personal  Details</li>
+        <li>Check if all certificates as  required are available</li>
+        <li>Calculate your \Class XII or  equivalent Percentage in four subjects: English, Physics, Chemistry, Biology or  CGPA Grade and its conversion value</li>
+        <li>Net Banking / Debit Card /  Credit Card</li>
+    </ol>
+
+
+</div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+    <div class="container">
+        <center class="f11">
+            Copyright &#64; All India Institute of Medical Sciences, New Delhi. All rights Reserved.
+        </center>
+    </div>
+</footer>
+</body>
+</html>
