@@ -1,4 +1,5 @@
-<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+<html style=""
+    class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
 <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
 <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
 <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
@@ -62,7 +63,7 @@
     <link rel="stylesheet" type="text/css" href="/Content/jquery.alerts.css?.V1.0">
 
     <script type="text/javascript">
-        $(window).load(function() {
+        $(window).load(function () {
             $('img').smoothZoom({
                 zoominSpeed: 800, // Time (in milliseconds) the zoom-in lasts
                 zoomoutSpeed: 400, // Time (in milliseconds) the zoom-out lasts
@@ -72,28 +73,28 @@
             });
         });
 
-        (function(global) {
-            if (typeof(global) === "undefined") {
+        (function (global) {
+            if (typeof (global) === "undefined") {
                 throw new Error("window is undefined");
             }
 
             var _hash = "!";
-            var noBackPlease = function() {
+            var noBackPlease = function () {
                 global.location.href += "#";
-                global.setTimeout(function() {
+                global.setTimeout(function () {
                     global.location.href += "!";
                 }, 50);
             };
 
-            global.onhashchange = function() {
+            global.onhashchange = function () {
                 if (global.location.hash !== _hash) {
                     global.location.hash = _hash;
                 }
             };
 
-            global.onload = function() {
+            global.onload = function () {
                 noBackPlease();
-                document.body.onkeydown = function(e) {
+                document.body.onkeydown = function (e) {
                     var elm = e.target.nodeName.toLowerCase();
                     if (e.which === 8 && (elm !== 'input' && elm !== 'textarea')) {
                         e.preventDefault();
@@ -122,14 +123,16 @@
     </style>
 </head>
 
-<body onload="preventBack();" onpageshow="if (event.persisted) preventBack();" onunload="" oncontextmenu="return false;" style="display: block;">
+<body onload="preventBack();" onpageshow="if (event.persisted) preventBack();" onunload="" oncontextmenu="return false;"
+    style="display: block;">
 
     <div id="Helpline" class="modal fade" role="dialog" style="z-index:99999;">
         <div class="modal-dialog">
             <div class="modal-content" style="margin-top: 165px;">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4 class="modal-title"><strong>Helpline Number (Timings: 9:30 AM to 6:00 PM - Monday to Saturday)</strong></h4>
+                    <h4 class="modal-title"><strong>Helpline Number (Timings: 9:30 AM to 6:00 PM - Monday to
+                            Saturday)</strong></h4>
                 </div>
                 <div class="modal-body">
                     <table class="table table-striped table-responsive table-bordered">
@@ -157,9 +160,11 @@
         <div class="container">
             <figure class="logo">
                 <span class="img">
-                    <img id="imgCollegeLogo" src="/Images/CollegeLogo.jpg" style="height: 36px; width: 36px; border-width: 0px;">
+                    <img id="imgCollegeLogo" src="/Images/CollegeLogo.jpg"
+                        style="height: 36px; width: 36px; border-width: 0px;">
                 </span>
-                <figcaption>All India Institute Of Medical Sciences<span id="lblCollegeName" class="hide"></span></figcaption>
+                <figcaption>All India Institute Of Medical Sciences<span id="lblCollegeName" class="hide"></span>
+                </figcaption>
             </figure>
 
         </div>
@@ -168,12 +173,17 @@
                 <div style="height: 35px">
                     <div class="row">
                         <div class="col-sm-6">
-                            <label class="welUser"><b>Welcome: </b><span id="lblApplicantName">SUNIL</span></label><label class="welUser" style="padding-left: 20px;"><b>Candidate ID: </b><span id="lblCandidateId">9371040876</span></label>
+                            <label class="welUser"><b>Welcome: </b><span
+                                    id="lblApplicantName">{{Auth::user()->name}}</span></label><label class="welUser"
+                                style="padding-left: 20px;"><b>Candidate ID: </b><span
+                                    id="lblCandidateId">{{Auth::user()->candidate_id}}</span></label>
                         </div>
                         <div class="col-sm-6">
                             <span class="helpLine">
 
-                                <span style="color: #ffffff; font-weight: bold; font-size: 12px; ">Toll Free Number: 1800117898,<br>(Timings: 9:30 AM to 5:00 PM - Monday to Friday &amp; 09:30 AM to 01:00 PM - Saturday)</span>
+                                <span style="color: #ffffff; font-weight: bold; font-size: 12px; ">Toll Free Number:
+                                    1800117898,<br>(Timings: 9:30 AM to 5:00 PM - Monday to Friday &amp; 09:30 AM to
+                                    01:00 PM - Saturday)</span>
                             </span>
                         </div>
                     </div>
@@ -186,14 +196,18 @@
             <div class="row">
                 <div class="col-sm-2">
                     <input type="hidden" id="hdnStudentId" value="1040876">
-                    <input type="hidden" id="hdnCurrentStudentId" value="KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
+                    <input type="hidden" id="hdnCurrentStudentId"
+                        value="KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
                     <input type="hidden" id="hdnIsReOpen" value="">
                     <input type="hidden" id="hdnAppliedPostId" value="1">
                     <section class="userProfile">
-                        <footer><a id="lnkLogout" title="Click here to LogOut" class="logout" href="/Logout">Logout</a><a id="lnkDashboard" title="Click here to Go Dashboard" class="dashboard" href="/Dashboard">My Page</a> </footer>
+                        <footer><a id="lnkLogout" title="Click here to LogOut" class="logout"
+                                href="/Logout">Logout</a><a id="lnkDashboard" title="Click here to Go Dashboard"
+                                class="dashboard" href="/Dashboard">My Page</a> </footer>
 
                         <figure>
-                            <img id="imgStudentMImg" src="/Images/image_upload.jpg" alt="Candidate Image" style="height: 130px; border-width: 0px;">
+                            <img id="imgStudentMImg" src="/Images/image_upload.jpg" alt="Candidate Image"
+                                style="height: 130px; border-width: 0px;">
                         </figure>
                     </section>
 
@@ -288,9 +302,11 @@
 
 
 
-                                <li><a href="https://docs.aiimsexams.ac.in/sites/CRE-AIIMS_Advertisement_v7.pdf" class="clsLink" target="_blank">Advertisement</a></li>
+                                <li><a href="https://docs.aiimsexams.ac.in/sites/CRE-AIIMS_Advertisement_v7.pdf"
+                                        class="clsLink" target="_blank">Advertisement</a></li>
 
-                                <li><a href="https://www.aiimsexams.ac.in/pdf/Introduction.pdf" target="_blank" class="clsLink">Introduction</a></li>
+                                <li><a href="https://www.aiimsexams.ac.in/pdf/Introduction.pdf" target="_blank"
+                                        class="clsLink">Introduction</a></li>
 
                                 <li><a href="/Login" class="clsLink">Registration/Login</a></li>
 
@@ -315,14 +331,14 @@
                         <script src="/Scripts/dv/Common.js"></script>
 
                         <script>
-                            $(document).ready(function() {
+                            $(document).ready(function () {
                                 fnGetApplicantById1();
 
                             });
 
                             function fnGetApplicantById1() {
 
-                                $.post(appPath + "/DashBoard/GetApplicantById", function(result) {
+                                $.post(appPath + "/DashBoard/GetApplicantById", function (result) {
 
                                     if (result && result != "error") {
                                         var studentJson = $.parseJSON(result.StudentDetails)[0];
@@ -384,7 +400,8 @@
                                     <div class="statusBar DMstatusBar">
                                         <ul>
                                             <li>
-                                                <a class="liLink" id="a1" href="EditRegistration?id=KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
+                                                <a class="liLink" id="a1"
+                                                    href="EditRegistration?id=KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
                                                     <div id="tbRegistration" class="icon active_btn">
                                                         1
                                                     </div>
@@ -476,7 +493,7 @@
                                     <script type="text/javascript" src="/Scripts/dv/qualification.js?v1?.V1.0"></script>
 
                                     <script type="text/javascript">
-                                        $(document).ready(function() {
+                                        $(document).ready(function () {
                                             var dateToday = new Date();
                                             $(".datepicker").datepicker({
                                                 changeMonth: true,
@@ -614,7 +631,7 @@
                                             $($("#" + id).closest(".custom-dropdown").find(".custom-dropBtn").html(dropvalue + "<span class='triangle_down'></span>"));
 
                                         }
-                                        window.onclick = function(event) {
+                                        window.onclick = function (event) {
                                             if (!event.target.matches('.custom-dropBtn')) {
                                                 var dropdowns = document.getElementsByClassName("dropdown-content");
                                                 var i;
@@ -632,17 +649,23 @@
                                     <input type="hidden" id="hdnQuelificationid" value="1">
                                     <input type="hidden" id="hdnSId" value="1040876">
                                     <div class="mar10">
-                                        <h2 class="bgDBlue marB10 pad5 fontWhite f15" style="height: auto; border: 0;">Qualification &amp; Address Details</h2>
-                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13">Qualifying Examination Details (Essential)</h3>
+                                        <h2 class="bgDBlue marB10 pad5 fontWhite f15" style="height: auto; border: 0;">
+                                            Qualification &amp; Address Details</h2>
+                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13">Qualifying Examination Details
+                                            (Essential)</h3>
                                         <div class="bor1pxSolid">
                                             <div class="form-group row">
                                                 <div class="custom-dropdown">
                                                     <div class="col-sm-12">
-                                                        <label class="col-sm-4 form-control-label">Qualifying Exam:<span class="label">*</span></label>
-                                                        <button onclick="myFunction()" class="custom-dropBtn">Degree from recognized University or its equivalent<span class="triangle_down"></span></button>
+                                                        <label class="col-sm-4 form-control-label">Qualifying Exam:<span
+                                                                class="label">*</span></label>
+                                                        <button onclick="myFunction()" class="custom-dropBtn">Degree
+                                                            from recognized University or its equivalent<span
+                                                                class="triangle_down"></span></button>
                                                         <div id="ddlLstQlfyExm" class="dropdown-content">
                                                             <div class="option" onclick="myOptionClick(1)" id="1">
-                                                                <p>Degree from recognized University or its equivalent</p>
+                                                                <p>Degree from recognized University or its equivalent
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -653,11 +676,14 @@
                                             <div id="divUnivDetails">
                                                 <div class="form-group row">
                                                     <div class="col-sm-6">
-                                                        <label for="txtUniversityName" class="col-sm-4 form-control-label">
+                                                        <label for="txtUniversityName"
+                                                            class="col-sm-4 form-control-label">
                                                             University/Board Name:
                                                         </label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtUniversityName" maxlength="80" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                            <input type="text" id="txtUniversityName" maxlength="80"
+                                                                class="form-control"
+                                                                onkeypress="return isAlphaNumeric(event);">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
@@ -665,17 +691,22 @@
                                                             Institute Name:
                                                         </label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtCollageName" maxlength="80" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                            <input type="text" id="txtCollageName" maxlength="80"
+                                                                class="form-control"
+                                                                onkeypress="return isAlphaNumeric(event);">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-sm-6">
-                                                        <label for="txtAdmissionDate" class="col-sm-4 form-control-label">
+                                                        <label for="txtAdmissionDate"
+                                                            class="col-sm-4 form-control-label">
                                                             Admission Date:
                                                         </label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtAdmissionDate" maxlength="10" class="form-control datepicker hasDatepicker" readonly="true">
+                                                            <input type="text" id="txtAdmissionDate" maxlength="10"
+                                                                class="form-control datepicker hasDatepicker"
+                                                                readonly="true">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
@@ -683,7 +714,9 @@
                                                             Passing Date:
                                                         </label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtPassingDate" maxlength="10" class="form-control datepicker hasDatepicker" readonly="true">
+                                                            <input type="text" id="txtPassingDate" maxlength="10"
+                                                                class="form-control datepicker hasDatepicker"
+                                                                readonly="true">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -751,75 +784,102 @@
 
                                             </div>
                                         </div>
-                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13 SecondDegree" style="display: none;">Second Degree Qualification Details</h3>
+                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13 SecondDegree"
+                                            style="display: none;">Second Degree Qualification Details</h3>
 
                                         <div class="form-group row SecondDegree" style="display: none;">
                                             <div class="col-sm-10">
-                                                <label class="col-sm-4 form-control-label"> You have any Second Degree Qualification</label>
+                                                <label class="col-sm-4 form-control-label"> You have any Second Degree
+                                                    Qualification</label>
                                                 <div class="col-sm-8">
-                                                    <input type="radio" value="1" id="RdSecYes" name="RdSecondDegree" onclick="funSecondDegreeStatus('1', '1')">Yes
-                                                    <input type="radio" value="0" id="RdSecNo" name="RdSecondDegree" class="marL20" onclick="funSecondDegreeStatus('1', '0')">No
+                                                    <input type="radio" value="1" id="RdSecYes" name="RdSecondDegree"
+                                                        onclick="funSecondDegreeStatus('1', '1')">Yes
+                                                    <input type="radio" value="0" id="RdSecNo" name="RdSecondDegree"
+                                                        class="marL20" onclick="funSecondDegreeStatus('1', '0')">No
 
                                                 </div>
                                             </div>
 
                                         </div>
 
-                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13" id="SecondDegreeheader" style="display: none">Second Educational Qualification (Essential)</h3>
+                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13" id="SecondDegreeheader"
+                                            style="display: none">Second Educational Qualification (Essential)</h3>
                                         <div class="bor1pxSolid" id="SecondDegree" style="display: none">
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
-                                                    <label class="col-sm-4 form-control-label">Qualifying Exam:<span class="label">*</span></label>
+                                                    <label class="col-sm-4 form-control-label">Qualifying Exam:<span
+                                                            class="label">*</span></label>
                                                     <div class="col-sm-8">
-                                                        <select style="cursor: pointer;" id="ddlSecondLstQlfyExm" class="form-control"></select>
+                                                        <select style="cursor: pointer;" id="ddlSecondLstQlfyExm"
+                                                            class="form-control"></select>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6" id="divDegreeName" style="display: none;">
-                                                    <label class="col-sm-4 form-control-label">Degree Name:<span class="label">*</span></label>
+                                                    <label class="col-sm-4 form-control-label">Degree Name:<span
+                                                            class="label">*</span></label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtDegreeName" maxlength="80" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                        <input type="text" id="txtDegreeName" maxlength="80"
+                                                            class="form-control"
+                                                            onkeypress="return isAlphaNumeric(event);">
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-6" id="divSecondOtherExamName" style="display: none;">
-                                                    <label class="col-sm-4 form-control-label">Qualifying Exam Status:<span class="label">*</span></label>
+                                                <div class="col-sm-6" id="divSecondOtherExamName"
+                                                    style="display: none;">
+                                                    <label class="col-sm-4 form-control-label">Qualifying Exam
+                                                        Status:<span class="label">*</span></label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtSecondOtherQualificationExam" readonly="true" value="Passed" maxlength="80" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                        <input type="text" id="txtSecondOtherQualificationExam"
+                                                            readonly="true" value="Passed" maxlength="80"
+                                                            class="form-control"
+                                                            onkeypress="return isAlphaNumeric(event);">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
-                                                    <label for="txtSecondUniversityName" class="col-sm-4 form-control-label">
+                                                    <label for="txtSecondUniversityName"
+                                                        class="col-sm-4 form-control-label">
                                                         University/Board Name:
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtSecondUniversityName" maxlength="80" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                        <input type="text" id="txtSecondUniversityName" maxlength="80"
+                                                            class="form-control"
+                                                            onkeypress="return isAlphaNumeric(event);">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <label for="txtSecondCollageName" class="col-sm-4 form-control-label">
+                                                    <label for="txtSecondCollageName"
+                                                        class="col-sm-4 form-control-label">
                                                         Institute Name:
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtSecondCollageName" maxlength="80" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                        <input type="text" id="txtSecondCollageName" maxlength="80"
+                                                            class="form-control"
+                                                            onkeypress="return isAlphaNumeric(event);">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
-                                                    <label for="txtSecondAdmissionDate" class="col-sm-4 form-control-label">
+                                                    <label for="txtSecondAdmissionDate"
+                                                        class="col-sm-4 form-control-label">
                                                         Admission Date:
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtSecondAdmissionDate" maxlength="10" class="form-control datepicker hasDatepicker" readonly="true">
+                                                        <input type="text" id="txtSecondAdmissionDate" maxlength="10"
+                                                            class="form-control datepicker hasDatepicker"
+                                                            readonly="true">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <label for="txtSecondPassingDate" class="col-sm-4 form-control-label">
+                                                    <label for="txtSecondPassingDate"
+                                                        class="col-sm-4 form-control-label">
                                                         Passing Date:
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtSecondPassingDate" maxlength="10" class="form-control datepicker hasDatepicker" readonly="true">
+                                                        <input type="text" id="txtSecondPassingDate" maxlength="10"
+                                                            class="form-control datepicker hasDatepicker"
+                                                            readonly="true">
                                                     </div>
                                                 </div>
                                             </div>
@@ -876,13 +936,15 @@
                                         <div id="divRegistrationDetails" style="display: none;">
                                             <div class="form-group row">
                                                 <div class="col-sm-12">
-                                                    <b><span class="col-sm-12 form-control-label" id="lblMsgHeader"></span></b>
+                                                    <b><span class="col-sm-12 form-control-label"
+                                                            id="lblMsgHeader"></span></b>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
                                                     <label class="col-sm-4 form-control-label">
-                                                        <span class="col-sm-12 form-control-label" id="lblStateCouncil"></span>
+                                                        <span class="col-sm-12 form-control-label"
+                                                            id="lblStateCouncil"></span>
 
                                                     </label>
                                                     <div class="col-sm-8">
@@ -930,72 +992,93 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <label class="col-sm-4 form-control-label">
-                                                        <span class="col-sm-12 form-control-label" id="lblRegistrationNumber"></span>
+                                                        <span class="col-sm-12 form-control-label"
+                                                            id="lblRegistrationNumber"></span>
 
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtRegistrationNumber" maxlength="25" required="" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                        <input type="text" id="txtRegistrationNumber" maxlength="25"
+                                                            required="" class="form-control"
+                                                            onkeypress="return isAlphaNumeric(event);">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
                                                     <label class="col-sm-4 form-control-label">
-                                                        <span class="col-sm-12 form-control-label" id="lblRegistrationDate"></span>
+                                                        <span class="col-sm-12 form-control-label"
+                                                            id="lblRegistrationDate"></span>
 
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtRegistrationDate" readonly="true" maxlength="10" class="form-control datepicker f12 hasDatepicker">
+                                                        <input type="text" id="txtRegistrationDate" readonly="true"
+                                                            maxlength="10"
+                                                            class="form-control datepicker f12 hasDatepicker">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
 
-                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13" id="DesirableDegreeheader" style="display: none">Desirable Qualification</h3>
+                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13" id="DesirableDegreeheader"
+                                            style="display: none">Desirable Qualification</h3>
                                         <div class="bor1pxSolid" id="divDesirableDegree" style="display: none">
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
-                                                    <label class="col-sm-4 form-control-label">Qualifying Exam:<span class="label">*</span></label>
+                                                    <label class="col-sm-4 form-control-label">Qualifying Exam:<span
+                                                            class="label">*</span></label>
                                                     <div class="col-sm-8">
 
-                                                        <select style="cursor: pointer;" id="ddlDesirableQlfyExm" class="form-control"></select>
+                                                        <select style="cursor: pointer;" id="ddlDesirableQlfyExm"
+                                                            class="form-control"></select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
-                                                    <label for="txtDesirableUniversityName" class="col-sm-4 form-control-label">
+                                                    <label for="txtDesirableUniversityName"
+                                                        class="col-sm-4 form-control-label">
                                                         University/Board Name:
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtDesirableExamUniversityName" maxlength="80" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                        <input type="text" id="txtDesirableExamUniversityName"
+                                                            maxlength="80" class="form-control"
+                                                            onkeypress="return isAlphaNumeric(event);">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <label for="txtDesirableCollageName" class="col-sm-4 form-control-label">
+                                                    <label for="txtDesirableCollageName"
+                                                        class="col-sm-4 form-control-label">
                                                         Institute Name:
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtDesirableCollageName" maxlength="80" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                        <input type="text" id="txtDesirableCollageName" maxlength="80"
+                                                            class="form-control"
+                                                            onkeypress="return isAlphaNumeric(event);">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
-                                                    <label for="txtDesirableAdmissionDate" class="col-sm-4 form-control-label">
+                                                    <label for="txtDesirableAdmissionDate"
+                                                        class="col-sm-4 form-control-label">
                                                         Admission Date:
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtDesirableAdmissionDate" maxlength="10" class="form-control datepicker hasDatepicker" readonly="true">
+                                                        <input type="text" id="txtDesirableAdmissionDate" maxlength="10"
+                                                            class="form-control datepicker hasDatepicker"
+                                                            readonly="true">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <label for="txtDesirablePassingDate" class="col-sm-4 form-control-label">
+                                                    <label for="txtDesirablePassingDate"
+                                                        class="col-sm-4 form-control-label">
                                                         Passing Date:
                                                     </label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtDesirablePassingDate" maxlength="10" class="form-control datepicker hasDatepicker" readonly="true">
+                                                        <input type="text" id="txtDesirablePassingDate" maxlength="10"
+                                                            class="form-control datepicker hasDatepicker"
+                                                            readonly="true">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1052,14 +1135,18 @@
 
 
 
-                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13">Additional Qualification Details</h3>
+                                        <h3 class="fontDarkRed bgGrey pad10 marT10 b f13">Additional Qualification
+                                            Details</h3>
                                         <div class="bor1pxSolid">
                                             <div class="form-group row">
                                                 <div class="col-sm-10">
-                                                    <label class="col-sm-4 form-control-label">Do You have any Extra Qualification</label>
+                                                    <label class="col-sm-4 form-control-label">Do You have any Extra
+                                                        Qualification</label>
                                                     <div class="col-sm-8">
-                                                        <input type="radio" value="1" id="RdExpYes" name="RdExperience" onclick="funIsOptionalStatus('1', '1')">Yes
-                                                        <input type="radio" value="0" id="RdExpNo" name="RdExperience" class="marL20" onclick="funIsOptionalStatus('1', '0')">No
+                                                        <input type="radio" value="1" id="RdExpYes" name="RdExperience"
+                                                            onclick="funIsOptionalStatus('1', '1')">Yes
+                                                        <input type="radio" value="0" id="RdExpNo" name="RdExperience"
+                                                            class="marL20" onclick="funIsOptionalStatus('1', '0')">No
 
                                                     </div>
                                                 </div>
@@ -1067,23 +1154,32 @@
                                             </div>
                                             <div id="ExtraQ1" style="display: none;" class="form-group row">
                                                 <div class="col-sm-6">
-                                                    <label class="col-sm-4 form-control-label">Degree Name<span class="label">*</span></label>
+                                                    <label class="col-sm-4 form-control-label">Degree Name<span
+                                                            class="label">*</span></label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtDegreeNameExtra" maxlength="80" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                        <input type="text" id="txtDegreeNameExtra" maxlength="80"
+                                                            class="form-control"
+                                                            onkeypress="return isAlphaNumeric(event);">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6" id="">
-                                                    <label class="col-sm-4 form-control-label">Admission Date <span class="label">*</span></label>
+                                                    <label class="col-sm-4 form-control-label">Admission Date <span
+                                                            class="label">*</span></label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtAdmissionDateExtRa" maxlength="10" class="form-control datepicker hasDatepicker" readonly="true">
+                                                        <input type="text" id="txtAdmissionDateExtRa" maxlength="10"
+                                                            class="form-control datepicker hasDatepicker"
+                                                            readonly="true">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div id="ExtraQ2" style="display: none;" class="form-group row">
                                                 <div class="col-sm-6">
-                                                    <label class="col-sm-4 form-control-label">Passing Date <span class="label">*</span></label>
+                                                    <label class="col-sm-4 form-control-label">Passing Date <span
+                                                            class="label">*</span></label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" id="txtPassingDateExtra" maxlength="10" class="form-control datepicker hasDatepicker" readonly="true">
+                                                        <input type="text" id="txtPassingDateExtra" maxlength="10"
+                                                            class="form-control datepicker hasDatepicker"
+                                                            readonly="true">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1095,20 +1191,24 @@
                                         <h3 class="fontDarkRed bgGrey pad10 marT10 b f13">
                                             Address Details:
                                             <label class="checkbox-inline pull-right f12">
-                                                <input type="checkbox" id="LinkSameAddress" name="chkSameAddress" style="margin-top: -4px; background: none">
-                                                (Check here if Correspondence Address is same as filled Permanent Address)
+                                                <input type="checkbox" id="LinkSameAddress" name="chkSameAddress"
+                                                    style="margin-top: -4px; background: none">
+                                                (Check here if Correspondence Address is same as filled Permanent
+                                                Address)
                                             </label>
                                         </h3>
                                         <div class="bor1pxSolid">
                                             <div class="form-group row">
                                                 <div class="col-sm-6 addressBg">
                                                     <div class="col-sm-12 ">
-                                                        <span id="spnMainHdPrmntAdrs" class="blue">(A) Permanent Address</span>
+                                                        <span id="spnMainHdPrmntAdrs" class="blue">(A) Permanent
+                                                            Address</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6 addressBg">
                                                     <div class="col-sm-12">
-                                                        <span id="spnMainHdPstlAdrs" class="blue">(B) Correspondence Address</span>
+                                                        <span id="spnMainHdPstlAdrs" class="blue">(B) Correspondence
+                                                            Address</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1118,29 +1218,37 @@
                                                     <div class="form-group clearfix">
                                                         <label class="col-sm-4 form-control-label">Country</label>
                                                         <div class="col-sm-8">
-                                                            <select id="ddlPCountry" onchange="funPCountry(this.value,'1');" class="form-control">
+                                                            <select id="ddlPCountry"
+                                                                onchange="funPCountry(this.value,'1');"
+                                                                class="form-control">
                                                                 <option value="0">--Select--</option>
                                                                 <option value="1">India</option>
                                                                 <option value="2">Other</option>
                                                             </select>
                                                         </div>
                                                         <div id="TrtxtPCountry" style="display: none">
-                                                            <label class="col-sm-4 form-control-label">Country Name</label>
+                                                            <label class="col-sm-4 form-control-label">Country
+                                                                Name</label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtPCountry" maxlength="100" class="form-control">
+                                                                <input type="text" id="txtPCountry" maxlength="100"
+                                                                    class="form-control">
                                                             </div>
                                                         </div>
                                                         <div id="TrtxtPState" style="display: none">
-                                                            <label class="col-sm-4 form-control-label">State/UT #</label>
+                                                            <label class="col-sm-4 form-control-label">State/UT
+                                                                #</label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtPState" maxlength="100" class="form-control">
+                                                                <input type="text" id="txtPState" maxlength="100"
+                                                                    class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
                                                         <label class="col-sm-4 form-control-label">Pin Code</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtPPCde" onkeypress="return isNumberKeyOnly(event);" maxlength="6" class="form-control">
+                                                            <input type="text" id="txtPPCde"
+                                                                onkeypress="return isNumberKeyOnly(event);"
+                                                                maxlength="6" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix" id="divPState">
@@ -1162,7 +1270,8 @@
                                                     <div id="TrtxtPDistrict" style="display: none">
                                                         <label class="col-sm-4 form-control-label">District Name</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtPDistrict" maxlength="100" class="form-control">
+                                                            <input type="text" id="txtPDistrict" maxlength="100"
+                                                                class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix" id="divPCty">
@@ -1176,26 +1285,39 @@
                                                     <div id="TrtxtPCty" style="display: none">
                                                         <label class="col-sm-4 form-control-label">City Name</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtPCty" maxlength="100" class="form-control">
+                                                            <input type="text" id="txtPCty" maxlength="100"
+                                                                class="form-control">
 
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
-                                                        <label class="col-sm-4 form-control-label">Address Line 1:</label>
+                                                        <label class="col-sm-4 form-control-label">Address Line
+                                                            1:</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtPAdrs" maxlength="100" class="form-control" onkeypress="return isAlphaNumeric(event)" onblur="return isAlphaNumeric(event)">
+                                                            <input type="text" id="txtPAdrs" maxlength="100"
+                                                                class="form-control"
+                                                                onkeypress="return isAlphaNumeric(event)"
+                                                                onblur="return isAlphaNumeric(event)">
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
-                                                        <label class="col-sm-4 form-control-label">Address Line 2 #</label>
+                                                        <label class="col-sm-4 form-control-label">Address Line 2
+                                                            #</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtPAdrs2" maxlength="100" class="form-control" onkeypress="return isAlphaNumeric(event)" onblur="return isAlphaNumeric(event)">
+                                                            <input type="text" id="txtPAdrs2" maxlength="100"
+                                                                class="form-control"
+                                                                onkeypress="return isAlphaNumeric(event)"
+                                                                onblur="return isAlphaNumeric(event)">
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
-                                                        <label class="col-sm-4 form-control-label">Address Line 3 #</label>
+                                                        <label class="col-sm-4 form-control-label">Address Line 3
+                                                            #</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtPAdrs3" maxlength="100" class="form-control" onkeypress="return isAlphaNumeric(event)" onblur="return isAlphaNumeric(event)">
+                                                            <input type="text" id="txtPAdrs3" maxlength="100"
+                                                                class="form-control"
+                                                                onkeypress="return isAlphaNumeric(event)"
+                                                                onblur="return isAlphaNumeric(event)">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1203,29 +1325,37 @@
                                                     <div class="form-group clearfix">
                                                         <label class="col-sm-4 form-control-label">Country</label>
                                                         <div class="col-sm-8">
-                                                            <select id="ddlMCountry" onchange="funMCountry(this.value,'1');" class="form-control">
+                                                            <select id="ddlMCountry"
+                                                                onchange="funMCountry(this.value,'1');"
+                                                                class="form-control">
                                                                 <option value="0">--Select--</option>
                                                                 <option value="1">India</option>
                                                                 <option value="2">Other</option>
                                                             </select>
                                                         </div>
                                                         <div id="TrtxtMCountry" style="display: none">
-                                                            <label class="col-sm-4 form-control-label">Country Name</label>
+                                                            <label class="col-sm-4 form-control-label">Country
+                                                                Name</label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtMCountry" maxlength="100" class="form-control">
+                                                                <input type="text" id="txtMCountry" maxlength="100"
+                                                                    class="form-control">
                                                             </div>
                                                         </div>
                                                         <div id="TrtxtMState" style="display: none">
-                                                            <label class="col-sm-4 form-control-label">State/UT Name #</label>
+                                                            <label class="col-sm-4 form-control-label">State/UT Name
+                                                                #</label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtMState" maxlength="100" class="form-control">
+                                                                <input type="text" id="txtMState" maxlength="100"
+                                                                    class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
                                                         <label class="col-sm-4 form-control-label">Pin Code</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtMPCde" onkeypress="return isNumberKeyOnly(event);" maxlength="6" class="form-control">
+                                                            <input type="text" id="txtMPCde"
+                                                                onkeypress="return isNumberKeyOnly(event);"
+                                                                maxlength="6" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix" id="divMState">
@@ -1247,7 +1377,8 @@
                                                     <div id="TrtxtMDistrict" style="display: none">
                                                         <label class="col-sm-4 form-control-label">District Name</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtMDistrict" maxlength="100" class="form-control">
+                                                            <input type="text" id="txtMDistrict" maxlength="100"
+                                                                class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix" id="divMCty">
@@ -1261,25 +1392,38 @@
                                                     <div id="TrtxtMCty" style="display: none">
                                                         <label class="col-sm-4 form-control-label">City Name</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtMCty" maxlength="100" class="form-control">
+                                                            <input type="text" id="txtMCty" maxlength="100"
+                                                                class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
-                                                        <label class="col-sm-4 form-control-label">Address Line 1:</label>
+                                                        <label class="col-sm-4 form-control-label">Address Line
+                                                            1:</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtMAdrs" maxlength="100" class="form-control" onkeypress="return isAlphaNumeric(event);" onblur="return isAlphaNumeric(event)">
+                                                            <input type="text" id="txtMAdrs" maxlength="100"
+                                                                class="form-control"
+                                                                onkeypress="return isAlphaNumeric(event);"
+                                                                onblur="return isAlphaNumeric(event)">
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
-                                                        <label class="col-sm-4 form-control-label">Address Line 2 #</label>
+                                                        <label class="col-sm-4 form-control-label">Address Line 2
+                                                            #</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtMAdrs2" maxlength="100" class="form-control" onkeypress="return isAlphaNumeric(event)" onblur="return isAlphaNumeric(event)">
+                                                            <input type="text" id="txtMAdrs2" maxlength="100"
+                                                                class="form-control"
+                                                                onkeypress="return isAlphaNumeric(event)"
+                                                                onblur="return isAlphaNumeric(event)">
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
-                                                        <label class="col-sm-4 form-control-label">Address Line 3 #</label>
+                                                        <label class="col-sm-4 form-control-label">Address Line 3
+                                                            #</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" id="txtMAdrs3" maxlength="100" class="form-control" onkeypress="return isAlphaNumeric(event)" onblur="return isAlphaNumeric(event)">
+                                                            <input type="text" id="txtMAdrs3" maxlength="100"
+                                                                class="form-control"
+                                                                onkeypress="return isAlphaNumeric(event)"
+                                                                onblur="return isAlphaNumeric(event)">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1289,7 +1433,8 @@
                                         <br>
                                         <div id="divSaveProceed" class="btnR" style="text-align: center;">
                                             <input type="button" id="btnSave" value="Save &amp; Exit" class="button">
-                                            <input type="button" id="btnProceed" value="Proceed to Step 3" class="button">
+                                            <input type="button" id="btnProceed" value="Proceed to Step 3"
+                                                class="button">
                                         </div>
 
 
@@ -1318,9 +1463,15 @@
 
 
     </div>
-    <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 400.4px; left: 554px; z-index: 1; display: none;">
-        <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all ui-state-disabled" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
-            <div class="ui-datepicker-title"><select class="ui-datepicker-month" data-handler="selectMonth" data-event="change">
+    <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"
+        style="position: absolute; top: 400.4px; left: 554px; z-index: 1; display: none;">
+        <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a
+                class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span
+                    class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a
+                class="ui-datepicker-next ui-corner-all ui-state-disabled" title="Next"><span
+                    class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
+            <div class="ui-datepicker-title"><select class="ui-datepicker-month" data-handler="selectMonth"
+                    data-event="change">
                     <option value="0">Jan</option>
                     <option value="1">Feb</option>
                     <option value="2">Mar</option>
@@ -1414,58 +1565,93 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td
+                        class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+                        &nbsp;</td>
                     <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
                     <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
                     <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
                     <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
-                    <td class=" ui-datepicker-days-cell-over " data-handler="selectDay" data-event="click" data-month="11" data-year="2023"><a class="ui-state-default" href="#">1</a></td>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td>
+                    <td class=" ui-datepicker-days-cell-over " data-handler="selectDay" data-event="click"
+                        data-month="11" data-year="2023"><a class="ui-state-default" href="#">1</a></td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">2</span></td>
                 </tr>
                 <tr>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">3</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span>
+                    </td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">9</span></td>
                 </tr>
                 <tr>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">10</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span>
+                    </td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">16</span></td>
                 </tr>
                 <tr>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">22</span></td>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">23</span></td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">17</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">22</span>
+                    </td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">23</span></td>
                 </tr>
                 <tr>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">24</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">25</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">26</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">27</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">28</span></td>
-                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">29</span></td>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">30</span></td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">24</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">25</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">26</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">27</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">28</span>
+                    </td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">29</span>
+                    </td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">30</span></td>
                 </tr>
                 <tr>
-                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">31</span></td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span
+                            class="ui-state-default">31</span></td>
                     <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
                     <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
                     <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
                     <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
                     <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
-                    <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td
+                        class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+                        &nbsp;</td>
                 </tr>
             </tbody>
         </table>

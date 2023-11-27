@@ -1,4 +1,5 @@
-<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+<html style=""
+    class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
 <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
 <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
 <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
@@ -62,7 +63,7 @@
     <link rel="stylesheet" type="text/css" href="/Content/jquery.alerts.css?.V1.0">
 
     <script type="text/javascript">
-        $(window).load(function() {
+        $(window).load(function () {
             $('img').smoothZoom({
                 zoominSpeed: 800, // Time (in milliseconds) the zoom-in lasts
                 zoomoutSpeed: 400, // Time (in milliseconds) the zoom-out lasts
@@ -72,28 +73,28 @@
             });
         });
 
-        (function(global) {
-            if (typeof(global) === "undefined") {
+        (function (global) {
+            if (typeof (global) === "undefined") {
                 throw new Error("window is undefined");
             }
 
             var _hash = "!";
-            var noBackPlease = function() {
+            var noBackPlease = function () {
                 global.location.href += "#";
-                global.setTimeout(function() {
+                global.setTimeout(function () {
                     global.location.href += "!";
                 }, 50);
             };
 
-            global.onhashchange = function() {
+            global.onhashchange = function () {
                 if (global.location.hash !== _hash) {
                     global.location.hash = _hash;
                 }
             };
 
-            global.onload = function() {
+            global.onload = function () {
                 noBackPlease();
-                document.body.onkeydown = function(e) {
+                document.body.onkeydown = function (e) {
                     var elm = e.target.nodeName.toLowerCase();
                     if (e.which === 8 && (elm !== 'input' && elm !== 'textarea')) {
                         e.preventDefault();
@@ -122,14 +123,16 @@
     </style>
 </head>
 
-<body onload="preventBack();" onpageshow="if (event.persisted) preventBack();" onunload="" oncontextmenu="return false;" style="display: block;">
+<body onload="preventBack();" onpageshow="if (event.persisted) preventBack();" onunload="" oncontextmenu="return false;"
+    style="display: block;">
 
     <div id="Helpline" class="modal fade" role="dialog" style="z-index:99999;">
         <div class="modal-dialog">
             <div class="modal-content" style="margin-top: 165px;">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4 class="modal-title"><strong>Helpline Number (Timings: 9:30 AM to 6:00 PM - Monday to Saturday)</strong></h4>
+                    <h4 class="modal-title"><strong>Helpline Number (Timings: 9:30 AM to 6:00 PM - Monday to
+                            Saturday)</strong></h4>
                 </div>
                 <div class="modal-body">
                     <table class="table table-striped table-responsive table-bordered">
@@ -157,9 +160,11 @@
         <div class="container">
             <figure class="logo">
                 <span class="img">
-                    <img id="imgCollegeLogo" src="/Images/CollegeLogo.jpg" style="height: 36px; width: 36px; border-width: 0px;">
+                    <img id="imgCollegeLogo" src="/Images/CollegeLogo.jpg"
+                        style="height: 36px; width: 36px; border-width: 0px;">
                 </span>
-                <figcaption>All India Institute Of Medical Sciences<span id="lblCollegeName" class="hide"></span></figcaption>
+                <figcaption>All India Institute Of Medical Sciences<span id="lblCollegeName" class="hide"></span>
+                </figcaption>
             </figure>
 
         </div>
@@ -168,12 +173,17 @@
                 <div style="height: 35px">
                     <div class="row">
                         <div class="col-sm-6">
-                            <label class="welUser"><b>Welcome: </b><span id="lblApplicantName">SUNIL</span></label><label class="welUser" style="padding-left: 20px;"><b>Candidate ID: </b><span id="lblCandidateId">9371040876</span></label>
+                            <label class="welUser"><b>Welcome: </b><span
+                                    id="lblApplicantName">{{Auth::user()->name}}</span></label><label class="welUser"
+                                style="padding-left: 20px;"><b>Candidate ID: </b><span
+                                    id="lblCandidateId">{{Auth::user()->candidate_id}}</span></label>
                         </div>
                         <div class="col-sm-6">
                             <span class="helpLine">
 
-                                <span style="color: #ffffff; font-weight: bold; font-size: 12px; ">Toll Free Number: 1800117898,<br>(Timings: 9:30 AM to 5:00 PM - Monday to Friday &amp; 09:30 AM to 01:00 PM - Saturday)</span>
+                                <span style="color: #ffffff; font-weight: bold; font-size: 12px; ">Toll Free Number:
+                                    1800117898,<br>(Timings: 9:30 AM to 5:00 PM - Monday to Friday &amp; 09:30 AM to
+                                    01:00 PM - Saturday)</span>
                             </span>
                         </div>
                     </div>
@@ -186,14 +196,18 @@
             <div class="row">
                 <div class="col-sm-2">
                     <input type="hidden" id="hdnStudentId" value="1040876">
-                    <input type="hidden" id="hdnCurrentStudentId" value="KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
+                    <input type="hidden" id="hdnCurrentStudentId"
+                        value="KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
                     <input type="hidden" id="hdnIsReOpen" value="">
                     <input type="hidden" id="hdnAppliedPostId" value="1">
                     <section class="userProfile">
-                        <footer><a id="lnkLogout" title="Click here to LogOut" class="logout" href="/Logout">Logout</a><a id="lnkDashboard" title="Click here to Go Dashboard" class="dashboard" href="/Dashboard">My Page</a> </footer>
+                        <footer><a id="lnkLogout" title="Click here to LogOut" class="logout"
+                                href="/Logout">Logout</a><a id="lnkDashboard" title="Click here to Go Dashboard"
+                                class="dashboard" href="/Dashboard">My Page</a> </footer>
 
                         <figure>
-                            <img id="imgStudentMImg" src="/Images/image_upload.jpg" alt="Candidate Image" style="height: 130px; border-width: 0px;">
+                            <img id="imgStudentMImg" src="/Images/image_upload.jpg" alt="Candidate Image"
+                                style="height: 130px; border-width: 0px;">
                         </figure>
                     </section>
 
@@ -288,9 +302,11 @@
 
 
 
-                                <li><a href="https://docs.aiimsexams.ac.in/sites/CRE-AIIMS_Advertisement_v7.pdf" class="clsLink" target="_blank">Advertisement</a></li>
+                                <li><a href="https://docs.aiimsexams.ac.in/sites/CRE-AIIMS_Advertisement_v7.pdf"
+                                        class="clsLink" target="_blank">Advertisement</a></li>
 
-                                <li><a href="https://www.aiimsexams.ac.in/pdf/Introduction.pdf" target="_blank" class="clsLink">Introduction</a></li>
+                                <li><a href="https://www.aiimsexams.ac.in/pdf/Introduction.pdf" target="_blank"
+                                        class="clsLink">Introduction</a></li>
 
                                 <li><a href="/Login" class="clsLink">Registration/Login</a></li>
 
@@ -315,14 +331,14 @@
                         <script src="/Scripts/dv/Common.js"></script>
 
                         <script>
-                            $(document).ready(function() {
+                            $(document).ready(function () {
                                 fnGetApplicantById1();
 
                             });
 
                             function fnGetApplicantById1() {
 
-                                $.post(appPath + "/DashBoard/GetApplicantById", function(result) {
+                                $.post(appPath + "/DashBoard/GetApplicantById", function (result) {
 
                                     if (result && result != "error") {
                                         var studentJson = $.parseJSON(result.StudentDetails)[0];
@@ -384,7 +400,8 @@
                                     <div class="statusBar DMstatusBar">
                                         <ul>
                                             <li>
-                                                <a class="liLink" id="a1" href="EditRegistration?id=KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
+                                                <a class="liLink" id="a1"
+                                                    href="EditRegistration?id=KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
                                                     <div id="tbRegistration" class="icon active_btn">
                                                         1
                                                     </div>
@@ -396,7 +413,8 @@
                                             </li>
 
                                             <li>
-                                                <a class="liLink" id="a2" href="Qualification?id=KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
+                                                <a class="liLink" id="a2"
+                                                    href="Qualification?id=KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
                                                     <div id="tbQualification" class="icon active_btn">
                                                         2
                                                     </div>
@@ -408,7 +426,8 @@
                                             </li>
 
                                             <li>
-                                                <a class="liLink" id="a3" href="Experience?id=KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
+                                                <a class="liLink" id="a3"
+                                                    href="Experience?id=KLeYLVfolBAlX08Qxr30F28XEq9hTkCEDKpGYSNJVSGlIUxjfySL">
                                                     <div id="tbExperience" class="icon active_btn">
                                                         3
                                                     </div>
@@ -505,9 +524,13 @@
                                                                 <input type="hidden" id="hdnRepayment" value="0">
                                                                 <input type="hidden" id="hdnFeeAmount" value="3000">
                                                                 <a href="javascript:void(0)" id="aPayment" class="btn">
-                                                                    <img src="https://www.onlinesbi.com/sbijava/images/sbi_logo.gif" style="height: 40px;" alt="Online Payment"></a>
-                                                                <a href="javascript:void(0)" id="aPaymentPayGov" class="btn marL5">
-                                                                    <img src="http://2.bp.blogspot.com/-en51g18uOjY/VewTDPn4O9I/AAAAAAAACQE/OJA2LFWJdF0/s1600/paygov.JPG" style="height: 49px; width: 104px;" alt="Online Payment"></a>
+                                                                    <img src="https://www.onlinesbi.com/sbijava/images/sbi_logo.gif"
+                                                                        style="height: 40px;" alt="Online Payment"></a>
+                                                                <a href="javascript:void(0)" id="aPaymentPayGov"
+                                                                    class="btn marL5">
+                                                                    <img src="http://2.bp.blogspot.com/-en51g18uOjY/VewTDPn4O9I/AAAAAAAACQE/OJA2LFWJdF0/s1600/paygov.JPG"
+                                                                        style="height: 49px; width: 104px;"
+                                                                        alt="Online Payment"></a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -517,24 +540,30 @@
                                         <div class="bor1pxSolid hide" id="dvChoiceStatus">
                                             <div style="padding:0px 10px;">
                                                 <div class="alert alert-danger">
-                                                    <strong>Note:</strong> This is only indicative seat availability. The number of available seats may change in the time when payment is made. <img src="http://www.animatedimages.org/data/media/111/animated-arrow-image-0311.gif">
+                                                    <strong>Note:</strong> This is only indicative seat availability.
+                                                    The number of available seats may change in the time when payment is
+                                                    made. <img
+                                                        src="http://www.animatedimages.org/data/media/111/animated-arrow-image-0311.gif">
                                                 </div>
                                             </div>
                                             <div class="row">
 
                                                 <div class="col-sm-12 marL10">
                                                     <input type="hidden" id="hdnAppliedPostId" value="0">
-                                                    Check City Choice Status : <a href="javascript:void(0)" id="aCityChoice" class="btn">Click here</a>
+                                                    Check City Choice Status : <a href="javascript:void(0)"
+                                                        id="aCityChoice" class="btn">Click here</a>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div style="clear: both;"></div>
-                                        <div id="myModal" class="modal fade res-modal" style="margin-top: 4.5%; display: none;">
+                                        <div id="myModal" class="modal fade res-modal"
+                                            style="margin-top: 4.5%; display: none;">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <a href="javascript:void(0);" title="Close" class="close" id="close">X</a>
+                                                        <a href="javascript:void(0);" title="Close" class="close"
+                                                            id="close">X</a>
                                                         <h3 class="modal-title">City Choice</h3>
                                                     </div>
                                                     <div class="modal-body">
@@ -546,7 +575,8 @@
                                                                             Select State:
                                                                         </div>
                                                                         <div class="col-sm-6">
-                                                                            <select id="ddlState" class="form-control"></select>
+                                                                            <select id="ddlState"
+                                                                                class="form-control"></select>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -574,14 +604,25 @@
                                                                     <td align="center">
                                                                         <img src="Images/pay-slip-logoSml.png">
                                                                     </td>
-                                                                    <td align="center" colspan="4" style="padding-top: 27px;" class="">
-                                                                        <span class="contentBlue b" style="font-size: 17px">ALL INDIA INSTITUTE OF MEDICAL SCIENCES</span><br>
-                                                                        <span class="font20 b" style="font-size: 15px">Ansari Nagar, New Delhi - 110608</span><br>
+                                                                    <td align="center" colspan="4"
+                                                                        style="padding-top: 27px;" class="">
+                                                                        <span class="contentBlue b"
+                                                                            style="font-size: 17px">ALL INDIA INSTITUTE
+                                                                            OF MEDICAL SCIENCES</span><br>
+                                                                        <span class="font20 b"
+                                                                            style="font-size: 15px">Ansari Nagar, New
+                                                                            Delhi - 110608</span><br>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="alert alert-danger paymentprint">
                                                                     <td align="center" colspan="4">
-                                                                        <span style="font-weight: bold; font-size: 16px;">Payment Receipt - <b>Common Recruitment Examination for AIIMS (CRE-AIIMS) for post of (<label style="font-weight: bold; font-size: 16px;" id="lblPostName"></label>)</b></span>
+                                                                        <span
+                                                                            style="font-weight: bold; font-size: 16px;">Payment
+                                                                            Receipt - <b>Common Recruitment Examination
+                                                                                for AIIMS (CRE-AIIMS) for post of
+                                                                                (<label
+                                                                                    style="font-weight: bold; font-size: 16px;"
+                                                                                    id="lblPostName"></label>)</b></span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -630,7 +671,9 @@
                                                                 </tr>
                                                                 <tr class="alert alert-danger paymentprint">
                                                                     <td align="center" colspan="4">
-                                                                        <span style="font-weight: bold; font-size: 16px;">Amount: Rs.
+                                                                        <span
+                                                                            style="font-weight: bold; font-size: 16px;">Amount:
+                                                                            Rs.
                                                                             <label id="lblPAmount"></label>
                                                                         </span>
                                                                     </td>
@@ -666,8 +709,10 @@
                                             </div>
                                         </div>
                                         <div class="marT10 btnR hideOnPrint" style="text-align: center;">
-                                            <input type="button" id="btnPrintPayment" value=" Print " class="button hideOnPrint">
-                                            <input type="button" id="btnProceed" value=" Proceed to Step 5 " class="button hideOnPrint">
+                                            <input type="button" id="btnPrintPayment" value=" Print "
+                                                class="button hideOnPrint">
+                                            <input type="button" id="btnProceed" value=" Proceed to Step 5 "
+                                                class="button hideOnPrint">
                                         </div>
                                     </div>
 

@@ -21,6 +21,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'form_step',
+        'candidate_id',
+        'show_password',
+        'phone',
+        'registration_no',
+        'payment_status',
     ];
 
     /**
@@ -42,4 +48,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // fetch applicant_data for user from table applicant_data in json then decode and append to user object userDetail
+    public function userDetail($step = 0)
+    {
+        $data = ApplicationData::where('user_id', $this->id)->where('form_step', $step)->first();
+        if ($data) {
+            $data = json_decode($data->data);
+        }
+        return $data;
+    }
+
+    // has many application data
+    public function applicationData()
+    {
+        return $this->hasMany(ApplicationData::class);
+    }
+
 }

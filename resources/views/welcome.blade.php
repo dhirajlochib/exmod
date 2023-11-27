@@ -480,74 +480,86 @@
                                                     Applicant Login
                                                     <div style="margin-top: 14px; font-size: 14px;">If you have already
                                                         registered, then kindly enter Candidate ID & Password.</div>
-                                                    <div class="div_form">
-                                                        <div class="row_auto">
-                                                            <div class="left30">
-                                                                Candidate ID:
-                                                            </div>
-                                                            <div class="right70">
-                                                                <input id="txtRegiEnroll" type="text" maxlength="10"
-                                                                    class="input2">
-                                                                <span style="color: Red; display: none;"></span>
+                                                    @if($errors->has('error'))
 
-                                                            </div>
-                                                        </div>
-                                                        <div class="row_auto">
-                                                            <div class="left30">
-                                                                Password:
-                                                            </div>
-                                                            <div class="right70">
-                                                                <input id="txtPassword" type="password" maxlength="15"
-                                                                    class="input2">
-                                                                <span style="color: Red; display: none;"></span>
-                                                            </div>
-                                                        </div>
+                                                    <script>
+                                                        jAlert('{{ $errors->first('error') }}', 'Message');
+                                                    </script>
 
-                                                        <div class="row_auto">
-                                                            <div class="left30">
-                                                                <label for="">
-                                                                    Enter Captcha:
-                                                                </label>
-                                                            </div>
-                                                            <div class="right70">
-                                                                <input type="text" id="txtCaptchaCheck" maxlength="10"
-                                                                    onpaste="return false" autocomplete="off"
-                                                                    class="input2"
-                                                                    onkeypress="return isNumberKeyOnly(event);">
-                                                                <br>
-                                                                <input type="text" id="txtCaptcha" class="capcha"
-                                                                    oncopy="return false">&nbsp;&nbsp;<input
-                                                                    type="button" id="btnCapcha" value=""
-                                                                    class="capchaRefresh"
-                                                                    onclick="RefreshCaptcha('#txtCaptcha');"><br>
-                                                            </div>
-                                                        </div>
+                                                    @endif
+                                                    <form action="{{route('do.login')}}" method="post">
+                                                        @csrf
+                                                        <div class="div_form">
+                                                            <div class="row_auto">
+                                                                <div class="left30">
+                                                                    Candidate ID:
+                                                                </div>
+                                                                <div class="right70">
+                                                                    <input id="txtRegiEnroll" type="text" maxlength="10"
+                                                                        class="input2" name="candidate_id">
+                                                                    <span style="color: Red; display: none;"></span>
 
-                                                        <div class="row_auto">
-                                                            <div class="left30">
-                                                                <label for="">
-                                                                </label>
+                                                                </div>
                                                             </div>
-                                                            <div class="right70">
-                                                                <span class="f12 fontDGrey b"
-                                                                    style="color: #E20000; font-weight: bold;">Type the
-                                                                    characters shown in the picture</span>
+                                                            <div class="row_auto">
+                                                                <div class="left30">
+                                                                    Password:
+                                                                </div>
+                                                                <div class="right70">
+                                                                    <input id="txtPassword" type="password"
+                                                                        maxlength="15" class="input2" name="password">
+                                                                    <span style="color: Red; display: none;"></span>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="row_auto">
-                                                            <div class="left30">
-                                                                <input id="hdnIPAddress" type="hidden">
-                                                            </div>
-                                                            <div class="right70">
-                                                                <input type="button" id="btnSubmit" class="button"
-                                                                    value="Login" tabindex="0">
-                                                                <a style="font-size: 12px; color: #024B93; cursor: pointer; font-weight: 700;"
-                                                                    class="forgotPassword forgotHide">Forgot your login
-                                                                    details?</a>
-                                                            </div>
-                                                        </div>
 
-                                                    </div>
+                                                            <div class="row_auto">
+                                                                <div class="left30">
+                                                                    <label for="">
+                                                                        Enter Captcha:
+                                                                    </label>
+                                                                </div>
+                                                                <div class="right70">
+                                                                    <input type="text" id="txtCaptchaCheck"
+                                                                        maxlength="10" onpaste="return false"
+                                                                        autocomplete="off" class="input2"
+                                                                        onkeypress="return isNumberKeyOnly(event);">
+                                                                    <br>
+                                                                    <input type="text" id="txtCaptcha" class="capcha"
+                                                                        oncopy="return false">&nbsp;&nbsp;<input
+                                                                        type="button" id="btnCapcha" value=""
+                                                                        class="capchaRefresh" required=""
+                                                                        onclick="RefreshCaptcha('#txtCaptcha');"><br>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row_auto">
+                                                                <div class="left30">
+                                                                    <label for="">
+                                                                    </label>
+                                                                </div>
+                                                                <div class="right70">
+                                                                    <span class="f12 fontDGrey b"
+                                                                        style="color: #E20000; font-weight: bold;">Type
+                                                                        the
+                                                                        characters shown in the picture</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row_auto">
+                                                                <div class="left30">
+                                                                    <input id="hdnIPAddress" type="hidden">
+                                                                </div>
+                                                                <div class="right70">
+                                                                    <input type="submit" id="btnSubmit" class="button"
+                                                                        value="Login" tabindex="0">
+                                                                    <a style="font-size: 12px; color: #024B93; cursor: pointer; font-weight: 700;"
+                                                                        class="forgotPassword forgotHide">Forgot your
+                                                                        login
+                                                                        details?</a>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>

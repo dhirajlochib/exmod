@@ -72,7 +72,8 @@
         <div class="container">
             <figure class="logo">
                 <span class="img">
-                    <img id="imgCollegeLogo" src="{{asset('img/CollegeLogo.jpg')}}" style="height: 36px; width: 36px; border-width: 0px;">
+                    <img id="imgCollegeLogo" src="{{asset('img/CollegeLogo.jpg')}}"
+                        style="height: 36px; width: 36px; border-width: 0px;">
                 </span>
                 <figcaption>All India Institute Of Medical Sciences<span id="lblCollegeName" class="hide"></span>
                 </figcaption>
@@ -203,9 +204,11 @@
                                 <li><a href="#" class="clsLink">Home</a></li>
                                 <!-- set home.notification route here -->
                                 <li><a href="{{route('home.notification')}}" class="clsLink">Notification</a></li>
-                                <li><a href="{{asset('sites/CRE-AIIMS_Advertisement_v7.pdf')}}" class="clsLink" target="_blank">Advertisement</a></li>
+                                <li><a href="{{asset('sites/CRE-AIIMS_Advertisement_v7.pdf')}}" class="clsLink"
+                                        target="_blank">Advertisement</a></li>
 
-                                <li><a href="{{asset('pdf/Introduction.pdf')}}" target="_blank" class="clsLink">Introduction</a>
+                                <li><a href="{{asset('pdf/Introduction.pdf')}}" target="_blank"
+                                        class="clsLink">Introduction</a>
                                 </li>
 
 
@@ -327,12 +330,12 @@
                                                 return "False";
                                             }
 
-                                            $(document).ready(function() {
+                                            $(document).ready(function () {
                                                 $("#hdnStudentId").val("0");
                                                 LogOutIfLogin();
                                                 $("#guidelines").hide();
                                                 if (isPannelClosed == "True" && $("#hdnIsAdmin").val() == "0") {
-                                                    jAlert('<span class="contentRed b f18">Registration has been closed.</span>', 'Message', function(r) {
+                                                    jAlert('<span class="contentRed b f18">Registration has been closed.</span>', 'Message', function (r) {
                                                         if (r == true) {
                                                             go("Login");
                                                         }
@@ -340,7 +343,7 @@
                                                 } else
                                                     BindStates("#ddlDomicile");
 
-                                                $(document).on('click', "#btnShowInstruction", function() {
+                                                $(document).on('click', "#btnShowInstruction", function () {
                                                     fnFirstGuideLineShow();
                                                 });
                                             });
@@ -381,7 +384,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="btnR" style="text-align: center;">
-                                                    <input type="button" id="btnShowInstruction" value="Proceed" class="button">
+                                                    <input type="button" id="btnShowInstruction" value="Proceed"
+                                                        class="button">
                                                 </div>
                                             </div>
                                         </div>
@@ -394,7 +398,9 @@
                                             <div class="bor1pxSolid">
                                                 <div class="row">
                                                     <div class="col-sm-8">
-                                                        <table border="1" cellspacing="0" cellpadding="0" class="table table100" style="color: #000; line-height: 16px; font-size: 12px;">
+                                                        <table border="1" cellspacing="0" cellpadding="0"
+                                                            class="table table100"
+                                                            style="color: #000; line-height: 16px; font-size: 12px;">
                                                             <tbody>
                                                                 <tr>
                                                                     <td valign="top" style="background-color: #F1F1F1;">
@@ -429,7 +435,8 @@
                                                                                 due
                                                                                 to ineligibility</li>
                                                                         </ul>
-                                                                        <div style="margin-left: -7px; width: 45px; float: left;">
+                                                                        <div
+                                                                            style="margin-left: -7px; width: 45px; float: left;">
                                                                             <strong>Step 1.</strong>
                                                                         </div>
                                                                         <ul class="guidelineList">
@@ -467,7 +474,8 @@
                                                                                 should be completed before closing date,
                                                                                 Admit Card &amp; Result.</li>
                                                                         </ul>
-                                                                        <div style="margin-left: -7px; width: 45px; float: left;">
+                                                                        <div
+                                                                            style="margin-left: -7px; width: 45px; float: left;">
                                                                             <strong>Step 2.</strong>
                                                                         </div>
                                                                         <ul class="guidelineList">
@@ -481,7 +489,8 @@
                                                                                 also fill Address details.
                                                                             </li>
                                                                         </ul>
-                                                                        <div style="margin-left: -7px; width: 45px; float: left;">
+                                                                        <div
+                                                                            style="margin-left: -7px; width: 45px; float: left;">
                                                                             <strong>Step 3.</strong>
                                                                         </div>
                                                                         <ul class="guidelineList">
@@ -494,7 +503,8 @@
                                                                                 applicable.
                                                                             </li>
                                                                         </ul>
-                                                                        <div style="margin-left: -7px; width: 45px; float: left;">
+                                                                        <div
+                                                                            style="margin-left: -7px; width: 45px; float: left;">
                                                                             <strong>Step 4.</strong>
                                                                         </div>
                                                                         <ul class="guidelineList">
@@ -510,7 +520,8 @@
                                                                                 can
                                                                                 be used for future correspondence. </li>
                                                                         </ul>
-                                                                        <div style="margin-left: -7px; width: 45px; float: left;">
+                                                                        <div
+                                                                            style="margin-left: -7px; width: 45px; float: left;">
                                                                             <strong>Step 5.</strong>
                                                                         </div>
                                                                         <ul class="guidelineList">
@@ -526,7 +537,8 @@
                                                                                 once selected cannot be changed later.
                                                                             </li>
                                                                         </ul>
-                                                                        <div style="margin-left: -7px; width: 45px; float: left;">
+                                                                        <div
+                                                                            style="margin-left: -7px; width: 45px; float: left;">
                                                                             <strong>Step 6.</strong>
                                                                         </div>
                                                                         <ul class="guidelineList">
@@ -554,7 +566,8 @@
                                                                                 opening date.
                                                                             </li>
                                                                         </ul>
-                                                                        <div style="margin-left: -7px; width: 45px; float: left;">
+                                                                        <div
+                                                                            style="margin-left: -7px; width: 45px; float: left;">
                                                                             <strong>Step 7.</strong>
                                                                         </div>
                                                                         <ul class="guidelineList">
@@ -601,7 +614,8 @@
                                                         </table>
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <img src="{{asset('img/AIIMS_Instruction.jpg')}}" alt="Instruction">
+                                                        <img src="{{asset('img/AIIMS_Instruction.jpg')}}"
+                                                            alt="Instruction">
                                                     </div>
                                                 </div>
                                             </div>
@@ -610,9 +624,10 @@
                                             </div>
                                         </div>
                                         <div class="mar10" id="divRegForm" style="">
-                                            <script type="text/javascript" src="{{asset('js/dv/registraion.js?v5.4?.V1.0')}}"></script>
+                                            <script type="text/javascript"
+                                                src="{{asset('js/dv/registraion.js?v5.4?.V1.0')}}"></script>
                                             <script type="text/javascript">
-                                                $(document).ready(function() {
+                                                $(document).ready(function () {
                                                     var dateToday = new Date();
                                                     $(".datepicker").datepicker({
                                                         changeMonth: true,
@@ -780,7 +795,7 @@
                                                     $($("#" + id).closest(".custom-dropdown").find(".custom-dropBtn").html(dropvalue + "<span class='triangle_down'></span>"));
                                                     fnBindCategory(id);
                                                 }
-                                                window.onclick = function(event) {
+                                                window.onclick = function (event) {
                                                     if (!event.target.matches('.custom-dropBtn')) {
                                                         var dropdowns = document.getElementsByClassName("dropdown-content");
                                                         var i;
@@ -810,17 +825,25 @@
                                             <input type="hidden" id="hdnUpperAgeUr">
                                             <input type="hidden" id="hdnAiimsRes">
                                             <input type="hidden" id="hdnPostValue">
+                                            <?php
+                                            $candidate_id = rand(1000000000, 9999999999);
+                                            ?>
+                                            <input type="hidden" name="candidate_id" id="candidate_id"
+                                                value="<?php echo $candidate_id; ?>">
                                             <div class="mar10" id="div_MainForm">
-                                                <h2 class="bgDBlue marB10 pad4 fontWhite" style=" width: 102%; margin-left: -10px; ">
+                                                <h2 class="bgDBlue marB10 pad4 fontWhite"
+                                                    style=" width: 102%; margin-left: -10px; ">
                                                     <span id="">Registration Form</span>
-                                                    <span class="pageSubTitle right f12" style="font-weight: bold; color: #FFED00; padding-top: 0px;">All
+                                                    <span class="pageSubTitle right f12"
+                                                        style="font-weight: bold; color: #FFED00; padding-top: 0px;">All
                                                         fields are mandatory except (#) marked
                                                         fields.&nbsp;&nbsp;</span>
                                                 </h2>
                                                 <div class="bor1pxSolid" style=" width: 102%; margin-left: -10px; ">
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" hidden="">
-                                                            <label class="col-sm-5 form-control-label b" style="padding-top: 2px;">Select Group for Post:</label>
+                                                            <label class="col-sm-5 form-control-label b"
+                                                                style="padding-top: 2px;">Select Group for Post:</label>
                                                             <div class="col-sm-7">
                                                                 <select id="ddlGroup" class="form-control">
                                                                     <option value="0">--Select--</option>
@@ -835,118 +858,293 @@
                                                         <div class="col-sm-12">
 
                                                             <div class="custom-dropdown">
-                                                                <label class="col-sm-5 form-control-label b" style="padding-top: 2px;">Post Applying for
+                                                                <label class="col-sm-5 form-control-label b"
+                                                                    style="padding-top: 2px;">Post Applying for
                                                                     :</label>
-                                                                <select class="custom-dropBtn" onchange="myOptionClick(this.value)" name="post_name" required>
-                                                                    <option value="Assistant Administrative Officer" selected="" disabled>Choose</option>
-                                                                    <option value="Assistant Administrative Officer">Assistant Administrative Officer</option>
-                                                                    <option value="Assistant Dietician">Assistant Dietician</option>
-                                                                    <option value="Assistant Engineer (A/C & R)">Assistant Engineer (A/C & R)</option>
-                                                                    <option value="Assistant Engineer (Civil)">Assistant Engineer (Civil)</option>
-                                                                    <option value="Assistant Engineer (Electrical)">Assistant Engineer (Electrical)</option>
-                                                                    <option value="Assistant Laundry Supervisor">Assistant Laundry Supervisor</option>
-                                                                    <option value="Assistant Store Officer/Assistant Stores Officer">Assistant Store Officer/Assistant Stores Officer</option>
-                                                                    <option value="Audiologist & Speech Therapist/Junior Audiologist/Speech Therapist/Technical Assistant (ENT)/Jr. Audiologist/Speech Therapist">Audiologist & Speech Therapist/Junior Audiologist/Speech Therapist/Technical Assistant (ENT)/Jr. Audiologist/Speech Therapist</option>
-                                                                    <option value="Audiologist/Speech Pathologist">Audiologist/Speech Pathologist</option>
-                                                                    <option value="Bio Medical Engineer">Bio Medical Engineer</option>
+                                                                <select class="custom-dropBtn"
+                                                                    onchange="myOptionClick(this.value)"
+                                                                    name="post_name" required>
+                                                                    <option value="Assistant Administrative Officer"
+                                                                        selected="" disabled>Choose</option>
+                                                                    <option value="Assistant Administrative Officer">
+                                                                        Assistant Administrative Officer</option>
+                                                                    <option value="Assistant Dietician">Assistant
+                                                                        Dietician</option>
+                                                                    <option value="Assistant Engineer (A/C & R)">
+                                                                        Assistant Engineer (A/C & R)</option>
+                                                                    <option value="Assistant Engineer (Civil)">Assistant
+                                                                        Engineer (Civil)</option>
+                                                                    <option value="Assistant Engineer (Electrical)">
+                                                                        Assistant Engineer (Electrical)</option>
+                                                                    <option value="Assistant Laundry Supervisor">
+                                                                        Assistant Laundry Supervisor</option>
+                                                                    <option
+                                                                        value="Assistant Store Officer/Assistant Stores Officer">
+                                                                        Assistant Store Officer/Assistant Stores Officer
+                                                                    </option>
+                                                                    <option
+                                                                        value="Audiologist & Speech Therapist/Junior Audiologist/Speech Therapist/Technical Assistant (ENT)/Jr. Audiologist/Speech Therapist">
+                                                                        Audiologist & Speech Therapist/Junior
+                                                                        Audiologist/Speech Therapist/Technical Assistant
+                                                                        (ENT)/Jr. Audiologist/Speech Therapist</option>
+                                                                    <option value="Audiologist/Speech Pathologist">
+                                                                        Audiologist/Speech Pathologist</option>
+                                                                    <option value="Bio Medical Engineer">Bio Medical
+                                                                        Engineer</option>
                                                                     <option value="Cashier">Cashier</option>
                                                                     <option value="Chief Cashier">Chief Cashier</option>
-                                                                    <option value="Coding Clerk/Medical Record Technicians/Junior Medical Record Officer/Junior Medical Record Officer (Receptionists)/Medical Record Technicians/Medical Record Technician(Record Clerk)">Coding Clerk/Medical Record Technicians/Junior Medical Record Officer/Junior Medical Record Officer (Receptionists)/Medical Record Technicians/Medical Record Technician(Record Clerk)</option>
-                                                                    <option value="CSSD Technicians">CSSD Technicians</option>
-                                                                    <option value="Dark Room Assistant Grade II">Dark Room Assistant Grade II</option>
-                                                                    <option value="Data Entry Operator Grade - A">Data Entry Operator Grade - A</option>
-                                                                    <option value="Dental Hygieneist/Technical Officer/Technical Officer (Dental)/Dental Technical/Dental Technician (Hygienist)/Dental Technician (Mechanic)/Technical Officer (Dental)/Dental Technician">Dental Hygieneist/Technical Officer/Technical Officer (Dental)/Dental Technical/Dental Technician (Hygienist)/Dental Technician (Mechanic)/Technical Officer (Dental)/Dental Technician</option>
+                                                                    <option
+                                                                        value="Coding Clerk/Medical Record Technicians/Junior Medical Record Officer/Junior Medical Record Officer (Receptionists)/Medical Record Technicians/Medical Record Technician(Record Clerk)">
+                                                                        Coding Clerk/Medical Record Technicians/Junior
+                                                                        Medical Record Officer/Junior Medical Record
+                                                                        Officer (Receptionists)/Medical Record
+                                                                        Technicians/Medical Record Technician(Record
+                                                                        Clerk)</option>
+                                                                    <option value="CSSD Technicians">CSSD Technicians
+                                                                    </option>
+                                                                    <option value="Dark Room Assistant Grade II">Dark
+                                                                        Room Assistant Grade II</option>
+                                                                    <option value="Data Entry Operator Grade - A">Data
+                                                                        Entry Operator Grade - A</option>
+                                                                    <option
+                                                                        value="Dental Hygieneist/Technical Officer/Technical Officer (Dental)/Dental Technical/Dental Technician (Hygienist)/Dental Technician (Mechanic)/Technical Officer (Dental)/Dental Technician">
+                                                                        Dental Hygieneist/Technical Officer/Technical
+                                                                        Officer (Dental)/Dental Technical/Dental
+                                                                        Technician (Hygienist)/Dental Technician
+                                                                        (Mechanic)/Technical Officer (Dental)/Dental
+                                                                        Technician</option>
                                                                     <option value="Dietician">Dietician</option>
-                                                                    <option value="Dissection Hall Attendant">Dissection Hall Attendant</option>
+                                                                    <option value="Dissection Hall Attendant">Dissection
+                                                                        Hall Attendant</option>
                                                                     <option value="Driver">Driver</option>
                                                                     <option value="Electrician">Electrician</option>
                                                                     <option value="Embryologist">Embryologist</option>
-                                                                    <option value="Fire Technician/Security cum Fire Jamadar">Fire Technician/Security cum Fire Jamadar</option>
-                                                                    <option value="Gas/Pump Mechanic">Gas/Pump Mechanic</option>
-                                                                    <option value="Health Educator (Social Psychologist)">Health Educator (Social Psychologist)</option>
+                                                                    <option
+                                                                        value="Fire Technician/Security cum Fire Jamadar">
+                                                                        Fire Technician/Security cum Fire Jamadar
+                                                                    </option>
+                                                                    <option value="Gas/Pump Mechanic">Gas/Pump Mechanic
+                                                                    </option>
+                                                                    <option
+                                                                        value="Health Educator (Social Psychologist)">
+                                                                        Health Educator (Social Psychologist)</option>
                                                                     <option value="Hindi Officer">Hindi Officer</option>
-                                                                    <option value="Hospital Attendant Grade III (Nursing Orderly)/Hospital Attendant Grade III (Nursing Orderly)/Hospital Attendant Grade III (Stretcher Bearers)">Hospital Attendant Grade III (Nursing Orderly)/Hospital Attendant Grade III (Nursing Orderly)/Hospital Attendant Grade III (Stretcher Bearers)</option>
-                                                                    <option value="Junior Accounts Officer/Junior Accounts Officer (Accountant)">Junior Accounts Officer/Junior Accounts Officer (Accountant)</option>
-                                                                    <option value="Junior Administrative Assistant/Lower Divisional Clerk/Jr. Administrative Assistant(LDC)/Lower Division Clerk">Junior Administrative Assistant/Lower Divisional Clerk/Jr. Administrative Assistant(LDC)/Lower Division Clerk</option>
-                                                                    <option value="Junior Administrative Officer/Office Assistant (N.S.)/Executive Assistant (N.S.)">Junior Administrative Officer/Office Assistant (N.S.)/Executive Assistant (N.S.)</option>
-                                                                    <option value="Junior Engineer (A/C&R)/Junior Engineer (AC&R)">Junior Engineer (A/C&R)/Junior Engineer (AC&R)</option>
-                                                                    <option value="Junior Engineer (Civil)">Junior Engineer (Civil)</option>
-                                                                    <option value="Junior Engineer (Electrical)">Junior Engineer (Electrical)</option>
-                                                                    <option value="Junior Hindi Translator/Junior Hindi Officer">Junior Hindi Translator/Junior Hindi Officer</option>
-                                                                    <option value="Junior Physiotherapist">Junior Physiotherapist</option>
-                                                                    <option value="Junior Reception Officer">Junior Reception Officer</option>
-                                                                    <option value="Junior Scale Steno (Hindi)">Junior Scale Steno (Hindi)</option>
-                                                                    <option value="Junior Store Officer/Store Keeper">Junior Store Officer/Store Keeper</option>
-                                                                    <option value="Junior Warden (House Keepers)">Junior Warden (House Keepers)</option>
-                                                                    <option value="Lab Attendants Grade II/Lab Attendant Grade II">Lab Attendants Grade II/Lab Attendant Grade II</option>
-                                                                    <option value="Lab Technician">Lab Technician</option>
-                                                                    <option value="Laundry Manager">Laundry Manager</option>
-                                                                    <option value="Laundry Supervisor">Laundry Supervisor</option>
-                                                                    <option value="Legal Assistant">Legal Assistant</option>
-                                                                    <option value="Librarian Grade I/Librarian Grade I (Documentalist)">Librarian Grade I/Librarian Grade I (Documentalist)</option>
-                                                                    <option value="Library And Information Assistant (Librarian Grade III)">Library And Information Assistant (Librarian Grade III)</option>
-                                                                    <option value="Library Attendant Grade II">Library Attendant Grade II</option>
-                                                                    <option value="Lineman (Electrical)">Lineman (Electrical)</option>
-                                                                    <option value="Manager/Supervisor/Gas Officer">Manager/Supervisor/Gas Officer</option>
-                                                                    <option value="Manifold Room Attendant">Manifold Room Attendant</option>
-                                                                    <option value="Manifold Technician (Gas Steward)/Manifold Technician (Gas Steward)/Gas Keeper">Manifold Technician (Gas Steward)/Manifold Technician (Gas Steward)/Gas Keeper</option>
-                                                                    <option value="Mechanic (A/C & R)/Mechanic (Air Conditioning & Refrigeration)">Mechanic (A/C & R)/Mechanic (Air Conditioning & Refrigeration)</option>
-                                                                    <option value="Mechanic (E & M)">Mechanic (E & M)</option>
-                                                                    <option value="Medical Record Officer">Medical Record Officer</option>
-                                                                    <option value="Medical Social Service Officer Grade I/Medico Social Service Officer Grade I">Medical Social Service Officer Grade I/Medico Social Service Officer Grade I</option>
-                                                                    <option value="Medical Social Service Officer Grade II">Medical Social Service Officer Grade II</option>
-                                                                    <option value="Medical Social Worker/Medical Social Worker (MSW)/Medico Social Worker">Medical Social Worker/Medical Social Worker (MSW)/Medico Social Worker</option>
-                                                                    <option value="Modellar (Artist)/Artist (Modellar)">Modellar (Artist)/Artist (Modellar)</option>
-                                                                    <option value="Mortuary Attendant">Mortuary Attendant</option>
-                                                                    <option value="Multi-Rehabilitation Worker (Physiotherapist)">Multi-Rehabilitation Worker (Physiotherapist)</option>
-                                                                    <option value="Multi-Tasking Staff">Multi-Tasking Staff</option>
-                                                                    <option value="Nuclear Medicine Technologist">Nuclear Medicine Technologist</option>
-                                                                    <option value="Occupational Therapist">Occupational Therapist</option>
-                                                                    <option value="Office Attendant Grade II">Office Attendant Grade II</option>
-                                                                    <option value="Operator (E&M)/Lift Operator">Operator (E&M)/Lift Operator</option>
-                                                                    <option value="Optometrist/Technical Officer Ophthalmology (Refractionist)/Technical Officer Ophthalmology">Optometrist/Technical Officer Ophthalmology (Refractionist)/Technical Officer Ophthalmology</option>
-                                                                    <option value="PACS Administrator">PACS Administrator</option>
+                                                                    <option
+                                                                        value="Hospital Attendant Grade III (Nursing Orderly)/Hospital Attendant Grade III (Nursing Orderly)/Hospital Attendant Grade III (Stretcher Bearers)">
+                                                                        Hospital Attendant Grade III (Nursing
+                                                                        Orderly)/Hospital Attendant Grade III (Nursing
+                                                                        Orderly)/Hospital Attendant Grade III (Stretcher
+                                                                        Bearers)</option>
+                                                                    <option
+                                                                        value="Junior Accounts Officer/Junior Accounts Officer (Accountant)">
+                                                                        Junior Accounts Officer/Junior Accounts Officer
+                                                                        (Accountant)</option>
+                                                                    <option
+                                                                        value="Junior Administrative Assistant/Lower Divisional Clerk/Jr. Administrative Assistant(LDC)/Lower Division Clerk">
+                                                                        Junior Administrative Assistant/Lower Divisional
+                                                                        Clerk/Jr. Administrative Assistant(LDC)/Lower
+                                                                        Division Clerk</option>
+                                                                    <option
+                                                                        value="Junior Administrative Officer/Office Assistant (N.S.)/Executive Assistant (N.S.)">
+                                                                        Junior Administrative Officer/Office Assistant
+                                                                        (N.S.)/Executive Assistant (N.S.)</option>
+                                                                    <option
+                                                                        value="Junior Engineer (A/C&R)/Junior Engineer (AC&R)">
+                                                                        Junior Engineer (A/C&R)/Junior Engineer (AC&R)
+                                                                    </option>
+                                                                    <option value="Junior Engineer (Civil)">Junior
+                                                                        Engineer (Civil)</option>
+                                                                    <option value="Junior Engineer (Electrical)">Junior
+                                                                        Engineer (Electrical)</option>
+                                                                    <option
+                                                                        value="Junior Hindi Translator/Junior Hindi Officer">
+                                                                        Junior Hindi Translator/Junior Hindi Officer
+                                                                    </option>
+                                                                    <option value="Junior Physiotherapist">Junior
+                                                                        Physiotherapist</option>
+                                                                    <option value="Junior Reception Officer">Junior
+                                                                        Reception Officer</option>
+                                                                    <option value="Junior Scale Steno (Hindi)">Junior
+                                                                        Scale Steno (Hindi)</option>
+                                                                    <option value="Junior Store Officer/Store Keeper">
+                                                                        Junior Store Officer/Store Keeper</option>
+                                                                    <option value="Junior Warden (House Keepers)">Junior
+                                                                        Warden (House Keepers)</option>
+                                                                    <option
+                                                                        value="Lab Attendants Grade II/Lab Attendant Grade II">
+                                                                        Lab Attendants Grade II/Lab Attendant Grade II
+                                                                    </option>
+                                                                    <option value="Lab Technician">Lab Technician
+                                                                    </option>
+                                                                    <option value="Laundry Manager">Laundry Manager
+                                                                    </option>
+                                                                    <option value="Laundry Supervisor">Laundry
+                                                                        Supervisor</option>
+                                                                    <option value="Legal Assistant">Legal Assistant
+                                                                    </option>
+                                                                    <option
+                                                                        value="Librarian Grade I/Librarian Grade I (Documentalist)">
+                                                                        Librarian Grade I/Librarian Grade I
+                                                                        (Documentalist)</option>
+                                                                    <option
+                                                                        value="Library And Information Assistant (Librarian Grade III)">
+                                                                        Library And Information Assistant (Librarian
+                                                                        Grade III)</option>
+                                                                    <option value="Library Attendant Grade II">Library
+                                                                        Attendant Grade II</option>
+                                                                    <option value="Lineman (Electrical)">Lineman
+                                                                        (Electrical)</option>
+                                                                    <option value="Manager/Supervisor/Gas Officer">
+                                                                        Manager/Supervisor/Gas Officer</option>
+                                                                    <option value="Manifold Room Attendant">Manifold
+                                                                        Room Attendant</option>
+                                                                    <option
+                                                                        value="Manifold Technician (Gas Steward)/Manifold Technician (Gas Steward)/Gas Keeper">
+                                                                        Manifold Technician (Gas Steward)/Manifold
+                                                                        Technician (Gas Steward)/Gas Keeper</option>
+                                                                    <option
+                                                                        value="Mechanic (A/C & R)/Mechanic (Air Conditioning & Refrigeration)">
+                                                                        Mechanic (A/C & R)/Mechanic (Air Conditioning &
+                                                                        Refrigeration)</option>
+                                                                    <option value="Mechanic (E & M)">Mechanic (E & M)
+                                                                    </option>
+                                                                    <option value="Medical Record Officer">Medical
+                                                                        Record Officer</option>
+                                                                    <option
+                                                                        value="Medical Social Service Officer Grade I/Medico Social Service Officer Grade I">
+                                                                        Medical Social Service Officer Grade I/Medico
+                                                                        Social Service Officer Grade I</option>
+                                                                    <option
+                                                                        value="Medical Social Service Officer Grade II">
+                                                                        Medical Social Service Officer Grade II</option>
+                                                                    <option
+                                                                        value="Medical Social Worker/Medical Social Worker (MSW)/Medico Social Worker">
+                                                                        Medical Social Worker/Medical Social Worker
+                                                                        (MSW)/Medico Social Worker</option>
+                                                                    <option value="Modellar (Artist)/Artist (Modellar)">
+                                                                        Modellar (Artist)/Artist (Modellar)</option>
+                                                                    <option value="Mortuary Attendant">Mortuary
+                                                                        Attendant</option>
+                                                                    <option
+                                                                        value="Multi-Rehabilitation Worker (Physiotherapist)">
+                                                                        Multi-Rehabilitation Worker (Physiotherapist)
+                                                                    </option>
+                                                                    <option value="Multi-Tasking Staff">Multi-Tasking
+                                                                        Staff</option>
+                                                                    <option value="Nuclear Medicine Technologist">
+                                                                        Nuclear Medicine Technologist</option>
+                                                                    <option value="Occupational Therapist">Occupational
+                                                                        Therapist</option>
+                                                                    <option value="Office Attendant Grade II">Office
+                                                                        Attendant Grade II</option>
+                                                                    <option value="Operator (E&M)/Lift Operator">
+                                                                        Operator (E&M)/Lift Operator</option>
+                                                                    <option
+                                                                        value="Optometrist/Technical Officer Ophthalmology (Refractionist)/Technical Officer Ophthalmology">
+                                                                        Optometrist/Technical Officer Ophthalmology
+                                                                        (Refractionist)/Technical Officer Ophthalmology
+                                                                    </option>
+                                                                    <option value="PACS Administrator">PACS
+                                                                        Administrator</option>
                                                                     <option value="Perfusionist">Perfusionist</option>
-                                                                    <option value="Personal Assistant (PA)/Personal Assistant/PA to Principal (S)">Personal Assistant (PA)/Personal Assistant/PA to Principal (S)</option>
-                                                                    <option value="Pharmacist/Pharmacist Grade II/Pharma Chemist/Chemical Examiner/Dispensing Attendant/Dispensing Attendants">Pharmacist/Pharmacist Grade II/Pharma Chemist/Chemical Examiner/Dispensing Attendant/Dispensing Attendants</option>
-                                                                    <option value="Physiotherapist">Physiotherapist</option>
+                                                                    <option
+                                                                        value="Personal Assistant (PA)/Personal Assistant/PA to Principal (S)">
+                                                                        Personal Assistant (PA)/Personal Assistant/PA to
+                                                                        Principal (S)</option>
+                                                                    <option
+                                                                        value="Pharmacist/Pharmacist Grade II/Pharma Chemist/Chemical Examiner/Dispensing Attendant/Dispensing Attendants">
+                                                                        Pharmacist/Pharmacist Grade II/Pharma
+                                                                        Chemist/Chemical Examiner/Dispensing
+                                                                        Attendant/Dispensing Attendants</option>
+                                                                    <option value="Physiotherapist">Physiotherapist
+                                                                    </option>
                                                                     <option value="Plumber">Plumber</option>
-                                                                    <option value="Private Secretary">Private Secretary</option>
+                                                                    <option value="Private Secretary">Private Secretary
+                                                                    </option>
                                                                     <option value="Programmer">Programmer</option>
-                                                                    <option value="Psychiatric Social Worker">Psychiatric Social Worker</option>
-                                                                    <option value="Public Health Nurse">Public Health Nurse</option>
-                                                                    <option value="Sanitary Inspector Grade II">Sanitary Inspector Grade II</option>
-                                                                    <option value="Senior Administrative Assistant/Upper Division Clerk/Senior Administrative Assistant (UDC)">Senior Administrative Assistant/Upper Division Clerk/Senior Administrative Assistant (UDC)</option>
-                                                                    <option value="Senior Mechanic (Air Conditioning & Refrigeration)">Senior Mechanic (Air Conditioning & Refrigeration)</option>
-                                                                    <option value="Senior Nursing Officer/Staff Nurse Grade I">Senior Nursing Officer/Staff Nurse Grade I</option>
-                                                                    <option value="Senior Technician (Laboratory)/Technical Officer (Technical Supervisor)">Senior Technician (Laboratory)/Technical Officer (Technical Supervisor)</option>
+                                                                    <option value="Psychiatric Social Worker">
+                                                                        Psychiatric Social Worker</option>
+                                                                    <option value="Public Health Nurse">Public Health
+                                                                        Nurse</option>
+                                                                    <option value="Sanitary Inspector Grade II">Sanitary
+                                                                        Inspector Grade II</option>
+                                                                    <option
+                                                                        value="Senior Administrative Assistant/Upper Division Clerk/Senior Administrative Assistant (UDC)">
+                                                                        Senior Administrative Assistant/Upper Division
+                                                                        Clerk/Senior Administrative Assistant (UDC)
+                                                                    </option>
+                                                                    <option
+                                                                        value="Senior Mechanic (Air Conditioning & Refrigeration)">
+                                                                        Senior Mechanic (Air Conditioning &
+                                                                        Refrigeration)</option>
+                                                                    <option
+                                                                        value="Senior Nursing Officer/Staff Nurse Grade I">
+                                                                        Senior Nursing Officer/Staff Nurse Grade I
+                                                                    </option>
+                                                                    <option
+                                                                        value="Senior Technician (Laboratory)/Technical Officer (Technical Supervisor)">
+                                                                        Senior Technician (Laboratory)/Technical Officer
+                                                                        (Technical Supervisor)</option>
                                                                     <option value="Social Worker">Social Worker</option>
-                                                                    <option value="Statistical Assistant">Statistical Assistant</option>
+                                                                    <option value="Statistical Assistant">Statistical
+                                                                        Assistant</option>
                                                                     <option value="Stenographer">Stenographer</option>
-                                                                    <option value="Store Attendant Grade II">Store Attendant Grade II</option>
-                                                                    <option value="Store Keeper-cum-clerk">Store Keeper-cum-clerk</option>
-                                                                    <option value="Tailor Grade III">Tailor Grade III</option>
-                                                                    <option value="TB & Chest Disease Health Assistant">TB & Chest Disease Health Assistant</option>
-                                                                    <option value="Technical Assistant/Technician(Laboratory)/Technicians(Laboratory)/Laboratory Technician/Technician (Laboratory)">Technical Assistant/Technician(Laboratory)/Technicians(Laboratory)/Laboratory Technician/Technician (Laboratory)</option>
-                                                                    <option value="Technician (OT)/Technicians(Laboratory)(OT)/Technical Assistant/Technician(OT)/Technical Assistant/Technician (Anesthesia/Operation theatre)">Technician (OT)/Technicians(Laboratory)(OT)/Technical Assistant/Technician(OT)/Technical Assistant/Technician (Anesthesia/Operation theatre)</option>
-                                                                    <option value="Technician (Prosthetics and Orthotics)">Technician (Prosthetics and Orthotics)</option>
-                                                                    <option value="Technician (Radiology Radiographic Technician Grade II)">Technician (Radiology Radiographic Technician Grade II)</option>
-                                                                    <option value="Technician (Radiotherapy)/Technicians (Radiotherapy)">Technician (Radiotherapy)/Technicians (Radiotherapy)</option>
-                                                                    <option value="Technician(Radiographic Technician Grade I)/Technicians (Radiology)">Technician(Radiographic Technician Grade I)/Technicians (Radiology)</option>
-                                                                    <option value="Transplant Coordinator">Transplant Coordinator</option>
-                                                                    <option value="Transport Supervisor">Transport Supervisor</option>
-                                                                    <option value="Vocation Counsellor">Vocation Counsellor</option>
-                                                                    <option value="Warden (Hostel Warden)">Warden (Hostel Warden)</option>
+                                                                    <option value="Store Attendant Grade II">Store
+                                                                        Attendant Grade II</option>
+                                                                    <option value="Store Keeper-cum-clerk">Store
+                                                                        Keeper-cum-clerk</option>
+                                                                    <option value="Tailor Grade III">Tailor Grade III
+                                                                    </option>
+                                                                    <option value="TB & Chest Disease Health Assistant">
+                                                                        TB & Chest Disease Health Assistant</option>
+                                                                    <option
+                                                                        value="Technical Assistant/Technician(Laboratory)/Technicians(Laboratory)/Laboratory Technician/Technician (Laboratory)">
+                                                                        Technical
+                                                                        Assistant/Technician(Laboratory)/Technicians(Laboratory)/Laboratory
+                                                                        Technician/Technician (Laboratory)</option>
+                                                                    <option
+                                                                        value="Technician (OT)/Technicians(Laboratory)(OT)/Technical Assistant/Technician(OT)/Technical Assistant/Technician (Anesthesia/Operation theatre)">
+                                                                        Technician
+                                                                        (OT)/Technicians(Laboratory)(OT)/Technical
+                                                                        Assistant/Technician(OT)/Technical
+                                                                        Assistant/Technician (Anesthesia/Operation
+                                                                        theatre)</option>
+                                                                    <option
+                                                                        value="Technician (Prosthetics and Orthotics)">
+                                                                        Technician (Prosthetics and Orthotics)</option>
+                                                                    <option
+                                                                        value="Technician (Radiology Radiographic Technician Grade II)">
+                                                                        Technician (Radiology Radiographic Technician
+                                                                        Grade II)</option>
+                                                                    <option
+                                                                        value="Technician (Radiotherapy)/Technicians (Radiotherapy)">
+                                                                        Technician (Radiotherapy)/Technicians
+                                                                        (Radiotherapy)</option>
+                                                                    <option
+                                                                        value="Technician(Radiographic Technician Grade I)/Technicians (Radiology)">
+                                                                        Technician(Radiographic Technician Grade
+                                                                        I)/Technicians (Radiology)</option>
+                                                                    <option value="Transplant Coordinator">Transplant
+                                                                        Coordinator</option>
+                                                                    <option value="Transport Supervisor">Transport
+                                                                        Supervisor</option>
+                                                                    <option value="Vocation Counsellor">Vocation
+                                                                        Counsellor</option>
+                                                                    <option value="Warden (Hostel Warden)">Warden
+                                                                        (Hostel Warden)</option>
                                                                     <option value="Wireman">Wireman</option>
-                                                                    <option value="Yoga Instructor">Yoga Instructor</option>
+                                                                    <option value="Yoga Instructor">Yoga Instructor
+                                                                    </option>
                                                                 </select>
                                                             </div>
 
                                                         </div>
                                                     </div>
-                                                    <div class="form-group row" id="divDepartment" style="display: none">
+                                                    <div class="form-group row" id="divDepartment"
+                                                        style="display: none">
                                                         <div class="col-sm-6">
-                                                            <label class="col-sm-5 form-control-label b" style="padding-top: 2px;">Name of the Deptt./
+                                                            <label class="col-sm-5 form-control-label b"
+                                                                style="padding-top: 2px;">Name of the Deptt./
                                                                 Centre:</label>
                                                             <div class="col-sm-7">
                                                                 <select id="ddlDepartment" class="form-control">
@@ -962,7 +1160,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h3 class="fontDarkRed bgGrey pad4 marT10 b f13" style=" width: 102%; margin-left: -10px; ">Personal Details</h3>
+                                                <h3 class="fontDarkRed bgGrey pad4 marT10 b f13"
+                                                    style=" width: 102%; margin-left: -10px; ">Personal Details</h3>
                                                 <div class="bor1pxSolid" style=" width: 102%; margin-left: -10px; ">
                                                     <div class="form-group col-sm-12">
                                                         <span class="blue">(Enter Full Name as per your Univeristy
@@ -973,14 +1172,18 @@
                                                             <label class="col-sm-4 form-control-label">Full
                                                                 Name:</label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtFirstName" class="form-control" required name="full_name" maxlength="150" onkeypress="return isAlpha(event);">
+                                                                <input type="text" id="txtFirstName"
+                                                                    class="form-control" required name="full_name"
+                                                                    maxlength="150" onkeypress="return isAlpha(event);">
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <label class="col-sm-4 form-control-label">Re enter Full
                                                                 Name:</label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtConfirmName" class="form-control" maxlength="150" onkeypress="return isAlpha(event);">
+                                                                <input type="text" id="txtConfirmName"
+                                                                    class="form-control" maxlength="150"
+                                                                    onkeypress="return isAlpha(event);">
 
                                                             </div>
                                                         </div>
@@ -995,7 +1198,9 @@
                                                             <label class="col-sm-4 form-control-label">Father/Guardian's
                                                                 Name:</label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtFatherName" maxlength="150" required name="father_name" class="form-control" onkeypress="return isAlpha(event);">
+                                                                <input type="text" id="txtFatherName" maxlength="150"
+                                                                    required name="father_name" class="form-control"
+                                                                    onkeypress="return isAlpha(event);">
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6">
@@ -1003,7 +1208,9 @@
                                                                 Mother's Name:
                                                             </label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtMotherName" maxlength="150" required name="mother_name" class="form-control" onkeypress="return isAlpha(event);">
+                                                                <input type="text" id="txtMotherName" maxlength="150"
+                                                                    required name="mother_name" class="form-control"
+                                                                    onkeypress="return isAlpha(event);">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1019,19 +1226,29 @@
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
                                                                 <label class="checkbox-inline" id="lblSC_1">
-                                                                    <input type="radio" id="rbtnlstCategory_SCN1" value="1" name="rbtnlstCategory1" onchange="return fnIsConfirmCategory(event);"><span>SC</span>
+                                                                    <input type="radio" id="rbtnlstCategory_SCN1"
+                                                                        value="SC" name="rbtnlstCategory1"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>SC</span>
                                                                 </label>
                                                                 <label class="checkbox-inline" id="lblST_1">
-                                                                    <input type="radio" id="rbtnlstCategory_ST1" value="2" name="rbtnlstCategory1" onchange="return fnIsConfirmCategory(event);"><span>ST</span>
+                                                                    <input type="radio" id="rbtnlstCategory_ST1"
+                                                                        value="ST" name="rbtnlstCategory1"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>ST</span>
                                                                 </label>
                                                                 <label class="checkbox-inline" id="lblOBC_1">
-                                                                    <input type="radio" id="rbtnlstCategory_OPH1" value="3" name="rbtnlstCategory1" onchange="return fnIsConfirmCategory(event);"><span>OBC(NCL)</span>
+                                                                    <input type="radio" id="rbtnlstCategory_OPH1"
+                                                                        value="OBC(NCL)" name="rbtnlstCategory1"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>OBC(NCL)</span>
                                                                 </label>
                                                                 <label class="checkbox-inline" id="lblGen_1">
-                                                                    <input type="radio" id="rbtnlstCategory_Gen1" value="4" name="rbtnlstCategory1" onchange="return fnIsConfirmCategory(event);"><span>General</span>
+                                                                    <input type="radio" id="rbtnlstCategory_Gen1"
+                                                                        value="GEN" name="rbtnlstCategory1"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>General</span>
                                                                 </label>
                                                                 <label class="checkbox-inline" id="lblEWS_1">
-                                                                    <input type="radio" id="rbtnlstCategory_EWS1" value="67" name="rbtnlstCategory1" onchange="return fnIsConfirmCategory(event);"><span>EWS</span>
+                                                                    <input type="radio" id="rbtnlstCategory_EWS1"
+                                                                        value="EWS" name="rbtnlstCategory1"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>EWS</span>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -1041,34 +1258,48 @@
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
                                                                 <label class="checkbox-inline" id="lblSC">
-                                                                    <input type="radio" id="rbtnlstCategory_SC" value="1" name="rbtnlstCategory" onchange="return fnIsConfirmCategory(event);"><span>SC</span>
+                                                                    <input type="radio" id="rbtnlstCategory_SC"
+                                                                        value="1" name="rbtnlstCategory"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>SC</span>
                                                                 </label>
                                                                 <label class="checkbox-inline" id="lblST">
-                                                                    <input type="radio" id="rbtnlstCategory_ST" value="2" name="rbtnlstCategory" onchange="return fnIsConfirmCategory(event);"><span>ST</span>
+                                                                    <input type="radio" id="rbtnlstCategory_ST"
+                                                                        value="2" name="rbtnlstCategory"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>ST</span>
                                                                 </label>
                                                                 <label class="checkbox-inline" id="lblOBC">
-                                                                    <input type="radio" id="rbtnlstCategory_OPH" value="3" name="rbtnlstCategory" onchange="return fnIsConfirmCategory(event);"><span>OBC(NCL)</span>
+                                                                    <input type="radio" id="rbtnlstCategory_OPH"
+                                                                        value="3" name="rbtnlstCategory"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>OBC(NCL)</span>
                                                                 </label>
                                                                 <label class="checkbox-inline" id="lblGen">
-                                                                    <input type="radio" id="rbtnlstCategory_Gen" value="4" name="rbtnlstCategory" onchange="return fnIsConfirmCategory(event);"><span>General</span>
+                                                                    <input type="radio" id="rbtnlstCategory_Gen"
+                                                                        value="4" name="rbtnlstCategory"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>General</span>
                                                                 </label>
                                                                 <label class="checkbox-inline" id="lblEWS">
-                                                                    <input type="radio" id="rbtnlstCategory_EWS" value="67" name="rbtnlstCategory" onchange="return fnIsConfirmCategory(event);"><span>EWS</span>
+                                                                    <input type="radio" id="rbtnlstCategory_EWS"
+                                                                        value="67" name="rbtnlstCategory"
+                                                                        onchange="return fnIsConfirmCategory(event);"><span>EWS</span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="form-group row hide" id="divCategoryEWS" style="display: none;">
+                                                    <div class="form-group row hide" id="divCategoryEWS"
+                                                        style="display: none;">
                                                         <div class="col-sm-6">
                                                             <label class="col-sm-8 form-control-label">
                                                                 Economically Weaker Section (EWS):
                                                             </label>
-                                                            <div class="col-sm-4 gencheckBox" style="padding: 0px 0px; margin-top: -3px;">
+                                                            <div class="col-sm-4 gencheckBox"
+                                                                style="padding: 0px 0px; margin-top: -3px;">
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstEWS_Yes" value="1" name="rbtnlstEWS"><span>Yes</span>
+                                                                    <input type="radio" id="rbtnlstEWS_Yes" value="1"
+                                                                        name="rbtnlstEWS"><span>Yes</span>
                                                                 </label>
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstEWS_No" value="0" name="rbtnlstEWS"><span>No</span>
+                                                                    <input type="radio" id="rbtnlstEWS_No" value="0"
+                                                                        name="rbtnlstEWS"><span>No</span>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -1079,7 +1310,10 @@
                                                                 Category Certificate No.:#(Optional)
                                                             </label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtCertificateNo" name="category_certificate_no" maxlength="30" class="form-control" onkeypress="return isAlphaNumeric(event);">
+                                                                <input type="text" id="txtCertificateNo"
+                                                                    name="category_certificate_no" maxlength="30"
+                                                                    class="form-control"
+                                                                    onkeypress="return isAlphaNumeric(event);">
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6" id="div1">
@@ -1087,7 +1321,9 @@
                                                                 Category Certificate Issue Date:#(Optional)
                                                             </label>
                                                             <div class="col-sm-8">
-                                                                <input type="date" id="txtCertificateDate" name="category_certificate_date" maxlength="10" class="form-control Certdatepicker f12 hasDatepicker">
+                                                                <input type="date" id="txtCertificateDate"
+                                                                    name="category_certificate_date" maxlength="10"
+                                                                    class="form-control Certdatepicker f12 hasDatepicker">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1100,12 +1336,15 @@
                                                                 persons with disability act, 2016)
 
                                                             </label>
-                                                            <div class="col-sm-4 gencheckBox" style="padding: 0px 0px; margin-top: -3px;">
+                                                            <div class="col-sm-4 gencheckBox"
+                                                                style="padding: 0px 0px; margin-top: -3px;">
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstPWD_yes" value="1" name="rbtnlstPWD"><span>Yes</span>
+                                                                    <input type="radio" id="rbtnlstPWD_yes" value="1"
+                                                                        name="rbtnlstPWD"><span>Yes</span>
                                                                 </label>
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstPWD_no" value="0" name="rbtnlstPWD"><span>No</span>
+                                                                    <input type="radio" id="rbtnlstPWD_no" value="0"
+                                                                        name="rbtnlstPWD"><span>No</span>
                                                                 </label>
                                                             </div>
                                                             <div id="divOPHPoupup" style="display: none;">
@@ -1121,16 +1360,19 @@
                                                                         AIIMS.
                                                                     </p>
                                                                     <p>
-                                                                        <u><a href="{{asset('pdf/Annexure-Ipwbdcategories.pdf')}}" target="_blank">Please Read the
+                                                                        <u><a href="{{asset('pdf/Annexure-Ipwbdcategories.pdf')}}"
+                                                                                target="_blank">Please Read the
                                                                                 "Specified
                                                                                 Disability" as under Section 2 of PWBD
                                                                                 Act</a></u>
                                                                     </p>
                                                                     <div class="checkbox-inline marB10">
-                                                                        <input type="checkbox" id="chkAgree" name="IAgree"><span>I agree</span>
+                                                                        <input type="checkbox" id="chkAgree"
+                                                                            name="IAgree"><span>I agree</span>
                                                                     </div>
                                                                     <div class="center">
-                                                                        <input type="button" value="OK" id="close" class="okBtn">
+                                                                        <input type="button" value="OK" id="close"
+                                                                            class="okBtn">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1151,11 +1393,13 @@
                                                     <div class="form-group row">
                                                         <div class="col-sm-6">
                                                             <div id="div_rbtnlstPWD" style="display: none;">
-                                                                <label class="col-sm-4 form-control-label" style="font-size: 12px;">
+                                                                <label class="col-sm-4 form-control-label"
+                                                                    style="font-size: 12px;">
                                                                     PWBD Category:
                                                                 </label>
                                                                 <div class="col-sm-8">
-                                                                    <select id="ddlPWD" style="width: 100%" name="pwd_category">
+                                                                    <select id="ddlPWD" style="width: 100%"
+                                                                        name="pwd_category">
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -1165,36 +1409,56 @@
                                                                 PWBD Sub Category:
                                                             </label>
                                                             <div class="col-sm-8">
-                                                                <select id="ddlPWDType" style="display: none;" name="pwd_sub_category">
-                                                                    <option value="--Select--" selected="" disabled>--Select--</option>
-                                                                    <option value="01 - LV(Low vision)">01 - LV(Low vision)</option>
-                                                                    <option value="02 - HH(Hard of Hearing)">02 - HH(Hard of Hearing)</option>
-                                                                    <option value="03 - OA(One Arm)">03 - OA(One Arm)</option>
-                                                                    <option value="04 - BA(Both Arms)">04 - BA(Both Arms)</option>
-                                                                    <option value="05 - OAL(One Arm and One Leg)">05 - OAL(One Arm and One Leg)</option>
-                                                                    <option value="06 - BLA(Both legs & Arms)">06 - BLA(Both legs & Arms)</option>
-                                                                    <option value="07 - OL(One Leg)">07 - OL(One Leg)</option>
-                                                                    <option value="08 - BL(Both Legs)">08 - BL(Both Legs)</option>
-                                                                    <option value="09 - LC(Leprosy Cured)">09 - LC(Leprosy Cured)</option>
-                                                                    <option value="10 - Dw(Dwarfism)">10 - Dw(Dwarfism)</option>
-                                                                    <option value="11 - AAV(Acid Attack Victims)">11 - AAV(Acid Attack Victims)</option>
-                                                                    <option value="12 - ASD(Autism Spectrum Disability)">12 - ASD(Autism Spectrum Disability)</option>
-                                                                    <option value="13 - MI(Mental Illness)">13 - MI(Mental Illness)</option>
-                                                                    <option value="14 - MD(Multiple Disabilities)">14 - MD(Multiple Disabilities)</option>
+                                                                <select id="ddlPWDType" style="display: none;"
+                                                                    name="pwd_sub_category">
+                                                                    <option value="--Select--" selected="" disabled>
+                                                                        --Select--</option>
+                                                                    <option value="01 - LV(Low vision)">01 - LV(Low
+                                                                        vision)</option>
+                                                                    <option value="02 - HH(Hard of Hearing)">02 -
+                                                                        HH(Hard of Hearing)</option>
+                                                                    <option value="03 - OA(One Arm)">03 - OA(One Arm)
+                                                                    </option>
+                                                                    <option value="04 - BA(Both Arms)">04 - BA(Both
+                                                                        Arms)</option>
+                                                                    <option value="05 - OAL(One Arm and One Leg)">05 -
+                                                                        OAL(One Arm and One Leg)</option>
+                                                                    <option value="06 - BLA(Both legs & Arms)">06 -
+                                                                        BLA(Both legs & Arms)</option>
+                                                                    <option value="07 - OL(One Leg)">07 - OL(One Leg)
+                                                                    </option>
+                                                                    <option value="08 - BL(Both Legs)">08 - BL(Both
+                                                                        Legs)</option>
+                                                                    <option value="09 - LC(Leprosy Cured)">09 -
+                                                                        LC(Leprosy Cured)</option>
+                                                                    <option value="10 - Dw(Dwarfism)">10 - Dw(Dwarfism)
+                                                                    </option>
+                                                                    <option value="11 - AAV(Acid Attack Victims)">11 -
+                                                                        AAV(Acid Attack Victims)</option>
+                                                                    <option
+                                                                        value="12 - ASD(Autism Spectrum Disability)">12
+                                                                        - ASD(Autism Spectrum Disability)</option>
+                                                                    <option value="13 - MI(Mental Illness)">13 -
+                                                                        MI(Mental Illness)</option>
+                                                                    <option value="14 - MD(Multiple Disabilities)">14 -
+                                                                        MD(Multiple Disabilities)</option>
                                                                 </select>
 
                                                             </div>
                                                         </div>
 
                                                     </div>
-                                                    <div class="form-group row" id="divLCSubCategory" style="display: none;">
+                                                    <div class="form-group row" id="divLCSubCategory"
+                                                        style="display: none;">
                                                         <div class="col-sm-6">
                                                             <div>
-                                                                <label class="col-sm-4 form-control-label" style="font-size: 12px;">
+                                                                <label class="col-sm-4 form-control-label"
+                                                                    style="font-size: 12px;">
                                                                     Leprosy Cured Sub Category :
                                                                 </label>
                                                                 <div class="col-sm-8">
-                                                                    <select id="ddlLCSubCategory" style="width: 100%" name="leprosy_cured_sub_category">
+                                                                    <select id="ddlLCSubCategory" style="width: 100%"
+                                                                        name="leprosy_cured_sub_category">
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -1206,7 +1470,8 @@
                                                             facility(Scribe/Compensatory
                                                             time) do you require to appear in the Exam?</p>
                                                         <div class="col-sm-12">
-                                                            <label class="col-sm-3 form-control-label" for="rbtnlstScribe_yes">
+                                                            <label class="col-sm-3 form-control-label"
+                                                                for="rbtnlstScribe_yes">
 
                                                                 <span style=" font-weight: 600;">A.</span> I need Scribe
                                                                 and
@@ -1214,7 +1479,9 @@
                                                             </label>
                                                             <div class="col-sm-3 gencheckBox">
                                                                 <label class="checkbox-inline">
-                                                                    <input style=" width: 20px;" type="radio" id="rbtnlstScribe_yes" value="1" name="rbtnlstScribe">
+                                                                    <input style=" width: 20px;" type="radio"
+                                                                        id="rbtnlstScribe_yes" value="1"
+                                                                        name="rbtnlstScribe">
                                                                 </label>
 
                                                             </div>
@@ -1226,7 +1493,8 @@
                                                             </label>
                                                             <div class="col-sm-3 gencheckBox">
                                                                 <label class="checkbox-inline">
-                                                                    <input style=" width: 20px;" type="radio" id="rbtnlstCto" value="2" name="rbtnlstScribe">
+                                                                    <input style=" width: 20px;" type="radio"
+                                                                        id="rbtnlstCto" value="2" name="rbtnlstScribe">
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -1239,7 +1507,8 @@
                                                             </label>
                                                             <div class="col-sm-3 gencheckBox">
                                                                 <label class="checkbox-inline">
-                                                                    <input style=" width: 20px;" type="radio" id="rbtnlstNot" value="3" name="rbtnlstScribe">
+                                                                    <input style=" width: 20px;" type="radio"
+                                                                        id="rbtnlstNot" value="3" name="rbtnlstScribe">
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -1258,21 +1527,26 @@
                                                                 line.
                                                             </p>
                                                             <p>
-                                                                <u><a href="{{asset('pdf/Annexure-Ipwbdcategories.pdf')}}" target="_blank">Please Read the Scribe
+                                                                <u><a href="{{asset('pdf/Annexure-Ipwbdcategories.pdf')}}"
+                                                                        target="_blank">Please Read the Scribe
                                                                         Details</a></u>
                                                             </p>
                                                             <div class="checkbox-inline marB10">
-                                                                <input type="checkbox" id="chkAgreeScribe" name="IAgreeScribe"><span>I agree</span>
+                                                                <input type="checkbox" id="chkAgreeScribe"
+                                                                    name="IAgreeScribe"><span>I agree</span>
                                                             </div>
                                                             <div class="center">
-                                                                <input type="button" value="OK" id="closeScribe" class="okBtn">
+                                                                <input type="button" value="OK" id="closeScribe"
+                                                                    class="okBtn">
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                    <div class="form-group row" id="divUploadPWBDCertificate" style="display: none;">
+                                                    <div class="form-group row" id="divUploadPWBDCertificate"
+                                                        style="display: none;">
                                                         <div class="col-sm-12">
-                                                            <label class="col-sm-12 form-control-label" style="color: red;">
+                                                            <label class="col-sm-12 form-control-label"
+                                                                style="color: red;">
                                                                 <strong>(It is mandatory to upload PWBD Certificate by
                                                                     clicking on Upload Images link/Button)</strong>
                                                             </label>
@@ -1287,7 +1561,9 @@
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstNationality_Indian" value="5" name="rbtnlstNationality" checked="checked">
+                                                                    <input type="radio" id="rbtnlstNationality_Indian"
+                                                                        value="5" name="rbtnlstNationality"
+                                                                        checked="checked">
                                                                     <span>Indian</span>
                                                                 </label>
 
@@ -1298,28 +1574,37 @@
                                                                 State of Domicile:
                                                             </label>
                                                             <div class="col-sm-8">
-                                                                <select id="ddlDomicile" class="form-control" required name="state">
-                                                                    <option value="0" selected disabled>[Choose One]</option>
-                                                                    <option value="ANDAMAN & NICOBAR ISLANDS">ANDAMAN & NICOBAR ISLANDS</option>
-                                                                    <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
-                                                                    <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                                                                <select id="ddlDomicile" class="form-control" required
+                                                                    name="state">
+                                                                    <option value="0" selected disabled>[Choose One]
+                                                                    </option>
+                                                                    <option value="ANDAMAN & NICOBAR ISLANDS">ANDAMAN &
+                                                                        NICOBAR ISLANDS</option>
+                                                                    <option value="ANDHRA PRADESH">ANDHRA PRADESH
+                                                                    </option>
+                                                                    <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH
+                                                                    </option>
                                                                     <option value="ASSAM">ASSAM</option>
                                                                     <option value="BIHAR">BIHAR</option>
                                                                     <option value="CHANDIGARH">CHANDIGARH</option>
                                                                     <option value="CHATTISGARH">CHATTISGARH</option>
-                                                                    <option value="DADRA & NAGAR HAVELI">DADRA & NAGAR HAVELI</option>
+                                                                    <option value="DADRA & NAGAR HAVELI">DADRA & NAGAR
+                                                                        HAVELI</option>
                                                                     <option value="DAMAN & DIU">DAMAN & DIU</option>
                                                                     <option value="DELHI">DELHI</option>
                                                                     <option value="GOA">GOA</option>
                                                                     <option value="GUJARAT">GUJARAT</option>
                                                                     <option value="HARYANA">HARYANA</option>
-                                                                    <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
-                                                                    <option value="JAMMU & KASHMIR">JAMMU & KASHMIR</option>
+                                                                    <option value="HIMACHAL PRADESH">HIMACHAL PRADESH
+                                                                    </option>
+                                                                    <option value="JAMMU & KASHMIR">JAMMU & KASHMIR
+                                                                    </option>
                                                                     <option value="JHARKHAND">JHARKHAND</option>
                                                                     <option value="KARNATAKA">KARNATAKA</option>
                                                                     <option value="KERALA">KERALA</option>
                                                                     <option value="LAKSHADWEEP">LAKSHADWEEP</option>
-                                                                    <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                                                                    <option value="MADHYA PRADESH">MADHYA PRADESH
+                                                                    </option>
                                                                     <option value="MAHARASHTRA">MAHARASHTRA</option>
                                                                     <option value="MANIPUR">MANIPUR</option>
                                                                     <option value="MEGHALAYA">MEGHALAYA</option>
@@ -1348,15 +1633,21 @@
                                                                 ID Proof:
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
-                                                                <select id="ddlIDProof" class="form-control" name="id_proof">
-                                                                    <option value="--Select--" selected disabled>--Select--</option>
+                                                                <select id="ddlIDProof" class="form-control"
+                                                                    name="id_proof">
+                                                                    <option value="--Select--" selected disabled>
+                                                                        --Select--</option>
                                                                     <option value="Aadhaar Card">Aadhaar Card</option>
-                                                                    <option value="Armed Force ID Card">Armed Force ID Card</option>
-                                                                    <option value="Driving Licence">Driving Licence</option>
-                                                                    <option value="Med. Reg.ID Card">Med. Reg.ID Card</option>
+                                                                    <option value="Armed Force ID Card">Armed Force ID
+                                                                        Card</option>
+                                                                    <option value="Driving Licence">Driving Licence
+                                                                    </option>
+                                                                    <option value="Med. Reg.ID Card">Med. Reg.ID Card
+                                                                    </option>
                                                                     <option value="PAN Card">PAN Card</option>
                                                                     <option value="Passport">Passport</option>
-                                                                    <option value="Voter ID/EPIC Card">Voter ID/EPIC Card</option>
+                                                                    <option value="Voter ID/EPIC Card">Voter ID/EPIC
+                                                                        Card</option>
                                                                 </select>
 
                                                             </div>
@@ -1366,7 +1657,10 @@
                                                                 ID No.:
                                                             </label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtIDNo" class="form-control" maxlength="30" onkeypress="return isAlphaNumeric(event);" required name="id_no">
+                                                                <input type="text" id="txtIDNo" class="form-control"
+                                                                    maxlength="30"
+                                                                    onkeypress="return isAlphaNumeric(event);" required
+                                                                    name="id_no">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1381,7 +1675,10 @@
                                                                 Place of Issue:
                                                             </label>
                                                             <div class="col-sm-8">
-                                                                <input type="text" id="txtPlaceOfIssue" class="form-control" maxlength="50" onkeypress="return isAlpha(event);" name="place_of_issue_id">
+                                                                <input type="text" id="txtPlaceOfIssue"
+                                                                    class="form-control" maxlength="50"
+                                                                    onkeypress="return isAlpha(event);"
+                                                                    name="place_of_issue_id">
                                                             </div>
                                                         </div>
 
@@ -1390,7 +1687,9 @@
                                                                 Issue Date:#(Optional)
                                                             </label>
                                                             <div class="col-sm-8">
-                                                                <input type="date" id="IssueDate" maxlength="10" class="form-control Certdatepicker hasDatepicker" name="issue_date_id">
+                                                                <input type="date" id="IssueDate" maxlength="10"
+                                                                    class="form-control Certdatepicker hasDatepicker"
+                                                                    name="issue_date_id">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1400,7 +1699,9 @@
                                                                 Valid Till:#(Optional)
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
-                                                                <input type="date" id="txtValidTill" maxlength="10" class="form-control Validdatepicker hasDatepicker" name="valid_till_id">
+                                                                <input type="date" id="txtValidTill" maxlength="10"
+                                                                    class="form-control Validdatepicker hasDatepicker"
+                                                                    name="valid_till_id">
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6">
@@ -1409,33 +1710,44 @@
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
                                                                 <label class="checkbox-inline" id="lblGenderMale">
-                                                                    <input type="radio" id="rbtnlstGender_Male" value="Male" name="rbtnlstGender">
+                                                                    <input type="radio" id="rbtnlstGender_Male"
+                                                                        value="Male" name="rbtnlstGender">
                                                                     <span>Male</span>
                                                                 </label>
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstGender_Female" value="Female" name="rbtnlstGender"><span>Female</span>
+                                                                    <input type="radio" id="rbtnlstGender_Female"
+                                                                        value="Female"
+                                                                        name="rbtnlstGender"><span>Female</span>
                                                                 </label>
                                                                 <label class="checkbox-inline" id="lblGenderThird">
-                                                                    <input type="radio" id="rbtnlstGender_Third" value="Third" name="rbtnlstGender"><span>Third
+                                                                    <input type="radio" id="rbtnlstGender_Third"
+                                                                        value="Third" name="rbtnlstGender"><span>Third
                                                                         Gender</span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="form-group row" id="dvMaritalStatus" style="display: none">
+                                                    <div class="form-group row" id="dvMaritalStatus"
+                                                        style="display: none">
                                                         <div class="col-sm-6">
 
                                                             <label class="col-sm-4 form-control-label">
                                                                 Marital Status:
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
-                                                                <select id="ddlMaritalStatus" class="form-control" name="marital_status">
-                                                                    <option value="--Select--" selected disabled>--Select--</option>
+                                                                <select id="ddlMaritalStatus" class="form-control"
+                                                                    name="marital_status">
+                                                                    <option value="--Select--" selected disabled>
+                                                                        --Select--</option>
                                                                     <option value="Married">Married</option>
                                                                     <option value="Unmarried">Unmarried</option>
                                                                     <option value="Widows">Widows</option>
-                                                                    <option value="Divorced Women">Divorced Women</option>
-                                                                    <option value="Women judicially separated and who are not remarried">Women judicially separated and who are not remarried</option>
+                                                                    <option value="Divorced Women">Divorced Women
+                                                                    </option>
+                                                                    <option
+                                                                        value="Women judicially separated and who are not remarried">
+                                                                        Women judicially separated and who are not
+                                                                        remarried</option>
                                                                 </select>
 
                                                             </div>
@@ -1449,10 +1761,14 @@
                                                                 </label>
                                                                 <div class="col-sm-8 gencheckBox">
                                                                     <label class="checkbox-inline">
-                                                                        <input type="radio" id="rbtnlstGovEmp_Yes" value="1" name="rbtnlstGovEmp"><span>Yes</span>
+                                                                        <input type="radio" id="rbtnlstGovEmp_Yes"
+                                                                            value="1"
+                                                                            name="rbtnlstGovEmp"><span>Yes</span>
                                                                     </label>
                                                                     <label class="checkbox-inline">
-                                                                        <input type="radio" id="rbtnlstGovEmp_No" value="0" name="rbtnlstGovEmp"><span>No</span>
+                                                                        <input type="radio" id="rbtnlstGovEmp_No"
+                                                                            value="0"
+                                                                            name="rbtnlstGovEmp"><span>No</span>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -1464,7 +1780,10 @@
                                                                         Name of Institution / Organisation :
                                                                     </label>
                                                                     <div class="col-sm-8 gencheckBox">
-                                                                        <input type="text" id="txtInstitution" class="form-control" maxlength="100" onkeypress="return isAlpha(event);" name="name_of_org_or_institution">
+                                                                        <input type="text" id="txtInstitution"
+                                                                            class="form-control" maxlength="100"
+                                                                            onkeypress="return isAlpha(event);"
+                                                                            name="name_of_org_or_institution">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-6">
@@ -1474,13 +1793,15 @@
 
                                                                     <div class="col-sm-8 gencheckBox">
 
-                                                                        <select id="ddlTypeOfOrgination" class="form-control" name="type_of_org">
+                                                                        <select id="ddlTypeOfOrgination"
+                                                                            class="form-control" name="type_of_org">
                                                                             <option value="0">--Select--</option>
                                                                             <option value="Central Government">Central
                                                                                 Government</option>
                                                                             <option value="State Government">State
                                                                                 Government</option>
-                                                                            <option value="Central Government Autonomous">
+                                                                            <option
+                                                                                value="Central Government Autonomous">
                                                                                 Central Government Autonomous</option>
                                                                             <option value="State Government Autonomous">
                                                                                 State Government Autonomous</option>
@@ -1496,7 +1817,8 @@
                                                                         Type of Job Status:
                                                                     </label>
                                                                     <div class="col-sm-8 gencheckBox">
-                                                                        <select id="ddlJobtype" class="form-control" name="type_of_job">
+                                                                        <select id="ddlJobtype" class="form-control"
+                                                                            name="type_of_job">
                                                                             <option value="0">--Select--</option>
                                                                             <option value="Regular">Regular</option>
 
@@ -1510,7 +1832,10 @@
                                                                         Present Position Held:
                                                                     </label>
                                                                     <div class="col-sm-8">
-                                                                        <input type="text" id="txtCurntPosition" class="form-control" maxlength="50" onkeypress="return isAlpha(event);" name="present_position_held">
+                                                                        <input type="text" id="txtCurntPosition"
+                                                                            class="form-control" maxlength="50"
+                                                                            onkeypress="return isAlpha(event);"
+                                                                            name="present_position_held">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1520,7 +1845,10 @@
                                                                         Date Of Appointment: From :
                                                                     </label>
                                                                     <div class="col-sm-8">
-                                                                        <input type="text" id="txtAppntmntDate" maxlength="10" class="form-control Certdatepicker hasDatepicker" name="job_date_of_appointment">
+                                                                        <input type="text" id="txtAppntmntDate"
+                                                                            maxlength="10"
+                                                                            class="form-control Certdatepicker hasDatepicker"
+                                                                            name="job_date_of_appointment">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-6">
@@ -1529,10 +1857,15 @@
                                                                     </label>
                                                                     <div class="col-sm-8">
 
-                                                                        <input type="text" id="txtRelievingDate" maxlength="10" class="form-control Certdatepicker hasDatepicker" name="job_till_date">
+                                                                        <input type="text" id="txtRelievingDate"
+                                                                            maxlength="10"
+                                                                            class="form-control Certdatepicker hasDatepicker"
+                                                                            name="job_till_date">
                                                                         <input type="hidden" id="hdnCountServiceYear">
-                                                                        <input type="hidden" id="hdnCountAiimsServiceYear">
-                                                                        <input type="hidden" id="hdnCountAiimsServiceYearEX">
+                                                                        <input type="hidden"
+                                                                            id="hdnCountAiimsServiceYear">
+                                                                        <input type="hidden"
+                                                                            id="hdnCountAiimsServiceYearEX">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1547,10 +1880,14 @@
                                                                 </label>
                                                                 <div class="col-sm-8 gencheckBox">
                                                                     <label class="checkbox-inline">
-                                                                        <input type="radio" id="rbtnlstAIIMSEmp_Yes" value="1" name="rbtnlstAIIMSEmp"><span>Yes</span>
+                                                                        <input type="radio" id="rbtnlstAIIMSEmp_Yes"
+                                                                            value="1"
+                                                                            name="rbtnlstAIIMSEmp"><span>Yes</span>
                                                                     </label>
                                                                     <label class="checkbox-inline">
-                                                                        <input type="radio" id="rbtnlstAIIMSEmp_No" value="0" name="rbtnlstAIIMSEmp"><span>No</span>
+                                                                        <input type="radio" id="rbtnlstAIIMSEmp_No"
+                                                                            value="0"
+                                                                            name="rbtnlstAIIMSEmp"><span>No</span>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -1562,7 +1899,10 @@
                                                                         Joining Date :
                                                                     </label>
                                                                     <div class="col-sm-8">
-                                                                        <input type="date" id="txtJoinDate" maxlength="10" class="form-control Certdatepicker hasDatepicker" name="aiims_joining_date">
+                                                                        <input type="date" id="txtJoinDate"
+                                                                            maxlength="10"
+                                                                            class="form-control Certdatepicker hasDatepicker"
+                                                                            name="aiims_joining_date">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-6">
@@ -1570,7 +1910,10 @@
                                                                         Post Name:
                                                                     </label>
                                                                     <div class="col-sm-8">
-                                                                        <input type="text" id="txtPostName" class="form-control" maxlength="50" onkeypress="return isAlpha(event);" name="aiims_post_name">
+                                                                        <input type="text" id="txtPostName"
+                                                                            class="form-control" maxlength="50"
+                                                                            onkeypress="return isAlpha(event);"
+                                                                            name="aiims_post_name">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1580,7 +1923,10 @@
                                                                         Department Name :
                                                                     </label>
                                                                     <div class="col-sm-8">
-                                                                        <input type="text" id="txtDepartmentName" class="form-control" maxlength="30" onkeypress="return isAlphaNumeric(event);" name="aiims_department_name">
+                                                                        <input type="text" id="txtDepartmentName"
+                                                                            class="form-control" maxlength="30"
+                                                                            onkeypress="return isAlphaNumeric(event);"
+                                                                            name="aiims_department_name">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-6">
@@ -1588,7 +1934,9 @@
                                                                         Type of Job Status:
                                                                     </label>
                                                                     <div class="col-sm-8 gencheckBox">
-                                                                        <select id="ddlAIIMSJobStatus" class="form-control" name="aiims_job_status">
+                                                                        <select id="ddlAIIMSJobStatus"
+                                                                            class="form-control"
+                                                                            name="aiims_job_status">
                                                                             <option value="0">--Select--</option>
                                                                             <option value="39">Regular</option>
                                                                             <option value="60">Contractual</option>
@@ -1604,22 +1952,38 @@
                                                                         AIIMS Name :
                                                                     </label>
                                                                     <div class="col-sm-8">
-                                                                        <select id="ddlAiimsName" class="form-control" name="aiims_center_name">
-                                                                            <option value="-1" selected disabled>[Choose One]</option>
-                                                                            <option value="AIIMS BATHINDA">AIIMS BATHINDA</option>
-                                                                            <option value="AIIMS BHOPAL">AIIMS BHOPAL</option>
-                                                                            <option value="AIIMS BIBINAGAR">AIIMS BIBINAGAR</option>
-                                                                            <option value="AIIMS BILASPUR">AIIMS BILASPUR</option>
-                                                                            <option value="AIIMS DEOGHAR">AIIMS DEOGHAR</option>
-                                                                            <option value="AIIMS GUWAHATI">AIIMS GUWAHATI</option>
-                                                                            <option value="AIIMS JODHPUR">AIIMS JODHPUR</option>
-                                                                            <option value="AIIMS KALYANI">AIIMS KALYANI</option>
-                                                                            <option value="AIIMS MANGALAGIRI">AIIMS MANGALAGIRI</option>
-                                                                            <option value="AIIMS NAGPUR">AIIMS NAGPUR</option>
-                                                                            <option value="AIIMS PATNA">AIIMS PATNA</option>
-                                                                            <option value="AIIMS RAE BARELI">AIIMS RAE BARELI</option>
-                                                                            <option value="AIIMS RISHIKESH">AIIMS RISHIKESH</option>
-                                                                            <option value="AIIMS VIJAYPUR">AIIMS VIJAYPUR</option>
+                                                                        <select id="ddlAiimsName" class="form-control"
+                                                                            name="aiims_center_name">
+                                                                            <option value="-1" selected disabled>[Choose
+                                                                                One]</option>
+                                                                            <option value="AIIMS BATHINDA">AIIMS
+                                                                                BATHINDA</option>
+                                                                            <option value="AIIMS BHOPAL">AIIMS BHOPAL
+                                                                            </option>
+                                                                            <option value="AIIMS BIBINAGAR">AIIMS
+                                                                                BIBINAGAR</option>
+                                                                            <option value="AIIMS BILASPUR">AIIMS
+                                                                                BILASPUR</option>
+                                                                            <option value="AIIMS DEOGHAR">AIIMS DEOGHAR
+                                                                            </option>
+                                                                            <option value="AIIMS GUWAHATI">AIIMS
+                                                                                GUWAHATI</option>
+                                                                            <option value="AIIMS JODHPUR">AIIMS JODHPUR
+                                                                            </option>
+                                                                            <option value="AIIMS KALYANI">AIIMS KALYANI
+                                                                            </option>
+                                                                            <option value="AIIMS MANGALAGIRI">AIIMS
+                                                                                MANGALAGIRI</option>
+                                                                            <option value="AIIMS NAGPUR">AIIMS NAGPUR
+                                                                            </option>
+                                                                            <option value="AIIMS PATNA">AIIMS PATNA
+                                                                            </option>
+                                                                            <option value="AIIMS RAE BARELI">AIIMS RAE
+                                                                                BARELI</option>
+                                                                            <option value="AIIMS RISHIKESH">AIIMS
+                                                                                RISHIKESH</option>
+                                                                            <option value="AIIMS VIJAYPUR">AIIMS
+                                                                                VIJAYPUR</option>
                                                                         </select>
 
                                                                     </div>
@@ -1636,10 +2000,13 @@
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstExSerMan_Yes" value="1" name="rbtnlstExSerMan"><span>Yes</span>
+                                                                    <input type="radio" id="rbtnlstExSerMan_Yes"
+                                                                        value="1"
+                                                                        name="rbtnlstExSerMan"><span>Yes</span>
                                                                 </label>
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstExSerMan_No" value="0" name="rbtnlstExSerMan"><span>No</span>
+                                                                    <input type="radio" id="rbtnlstExSerMan_No"
+                                                                        value="0" name="rbtnlstExSerMan"><span>No</span>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -1667,13 +2034,24 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <input type="text" id="txtServiceIn" maxlength="50" onkeypress="return isAlphaNumeric(event);" name="name_of_armed_service">
+                                                                                    <input type="text" id="txtServiceIn"
+                                                                                        maxlength="50"
+                                                                                        onkeypress="return isAlphaNumeric(event);"
+                                                                                        name="name_of_armed_service">
                                                                                 </td>
                                                                                 <td>
-                                                                                    <input type="date" id="txtSerStartDate" maxlength="10" class="form-control Certdatepicker hasDatepicker" name="armed_service_start_date">
+                                                                                    <input type="date"
+                                                                                        id="txtSerStartDate"
+                                                                                        maxlength="10"
+                                                                                        class="form-control Certdatepicker hasDatepicker"
+                                                                                        name="armed_service_start_date">
                                                                                 </td>
                                                                                 <td>
-                                                                                    <input type="date" id="txtServEndDate" maxlength="10" class="form-control Certdatepicker hasDatepicker" name="armed_service_end_date">
+                                                                                    <input type="date"
+                                                                                        id="txtServEndDate"
+                                                                                        maxlength="10"
+                                                                                        class="form-control Certdatepicker hasDatepicker"
+                                                                                        name="armed_service_end_date">
                                                                                 </td>
                                                                                 <th>
                                                                                     <span id="spnLenService"></span>
@@ -1694,10 +2072,14 @@
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstDefenceDisabled_Yes" value="1" name="rbtnlstDefenceDisabled"><span>Yes</span>
+                                                                    <input type="radio" id="rbtnlstDefenceDisabled_Yes"
+                                                                        value="1"
+                                                                        name="rbtnlstDefenceDisabled"><span>Yes</span>
                                                                 </label>
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstDefenceDisabled_No" value="0" name="rbtnlstDefenceDisabled"><span>No</span>
+                                                                    <input type="radio" id="rbtnlstDefenceDisabled_No"
+                                                                        value="0"
+                                                                        name="rbtnlstDefenceDisabled"><span>No</span>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -1708,10 +2090,14 @@
                                                             </label>
                                                             <div class="col-sm-8 gencheckBox">
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstSerInArmedForces_Yes" value="1" name="rbtnlstSerInArmedForces"><span>Yes</span>
+                                                                    <input type="radio" id="rbtnlstSerInArmedForces_Yes"
+                                                                        value="1"
+                                                                        name="rbtnlstSerInArmedForces"><span>Yes</span>
                                                                 </label>
                                                                 <label class="checkbox-inline">
-                                                                    <input type="radio" id="rbtnlstSerInArmedForces_No" value="0" name="rbtnlstSerInArmedForces"><span>No</span>
+                                                                    <input type="radio" id="rbtnlstSerInArmedForces_No"
+                                                                        value="0"
+                                                                        name="rbtnlstSerInArmedForces"><span>No</span>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -1728,7 +2114,9 @@
                                                                 Date of Birth:
                                                             </label>
                                                             <div class="col-sm-8">
-                                                                <input type="date" id="txtDOB" class="form-control datepicker hasDatepicker" name="dob">
+                                                                <input type="date" id="txtDOB"
+                                                                    class="form-control datepicker hasDatepicker"
+                                                                    name="dob">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1747,7 +2135,8 @@
                                                             Email ID:
                                                         </label>
                                                         <div class="col-sm-7">
-                                                            <input type="text" id="txtEmail" maxlength="50" class="form-control" name="email">
+                                                            <input type="text" id="txtEmail" maxlength="50"
+                                                                class="form-control" name="email">
                                                         </div>
                                                     </div>
                                                     <div class="col-sx-12 col-sm-6">
@@ -1755,7 +2144,8 @@
                                                             Confirm Email ID:
                                                         </label>
                                                         <div class="col-sm-7">
-                                                            <input type="text" id="txtCEmail" maxlength="50" class="form-control">
+                                                            <input type="text" id="txtCEmail" maxlength="50"
+                                                                class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1763,19 +2153,26 @@
                                                     <div class="col-sm-6">
                                                         <label class="col-sm-5 form-control-label">
                                                             Mobile No.:
-                                                            <span style="float: right; margin-right: -27px; padding-top: 5px;">+91</span>
+                                                            <span
+                                                                style="float: right; margin-right: -27px; padding-top: 5px;">+91</span>
                                                         </label>
                                                         <div class="col-sm-7">
-                                                            <input type="text" id="txtMobileNo" maxlength="10" class="form-control" onkeypress="return isNumberKeyOnly(event);" name="mobile_no">
+                                                            <input type="text" id="txtMobileNo" maxlength="10"
+                                                                class="form-control"
+                                                                onkeypress="return isNumberKeyOnly(event);"
+                                                                name="mobile_no">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <label class="col-sm-5 form-control-label">
                                                             Confirm Mobile No.:
-                                                            <span style="float: right; margin-right: -27px; padding-top: 5px;">+91</span>
+                                                            <span
+                                                                style="float: right; margin-right: -27px; padding-top: 5px;">+91</span>
                                                         </label>
                                                         <div class="col-sm-7">
-                                                            <input type="text" id="txtCMobileNo" maxlength="10" class="form-control" onkeypress="return isNumberKeyOnly(event);">
+                                                            <input type="text" id="txtCMobileNo" maxlength="10"
+                                                                class="form-control"
+                                                                onkeypress="return isNumberKeyOnly(event);">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1795,11 +2192,13 @@
                                                         </label>
                                                         <div class="col-sm-7 gencheckBox">
                                                             <label class="checkbox-inline">
-                                                                <input type="radio" id="rbtnlstAlternateNumber_Mobile" value="1" name="rbtnlstAlternateNumber">
+                                                                <input type="radio" id="rbtnlstAlternateNumber_Mobile"
+                                                                    value="1" name="rbtnlstAlternateNumber">
                                                                 <span>Mobile</span>
                                                             </label>
                                                             <label class="checkbox-inline">
-                                                                <input type="radio" id="rbtnlstAlternateNumber_Landline" value="2" name="rbtnlstAlternateNumber">
+                                                                <input type="radio" id="rbtnlstAlternateNumber_Landline"
+                                                                    value="2" name="rbtnlstAlternateNumber">
                                                                 <span>Landline</span>
                                                             </label>
                                                         </div>
@@ -1808,10 +2207,14 @@
                                                         <div id="div_OtherMobileNo" style="">
                                                             <label class="col-sm-5 form-control-label">
                                                                 Mobile No.:
-                                                                <span style="float: right; margin-right: -27px; padding-top: 5px;">+91</span>
+                                                                <span
+                                                                    style="float: right; margin-right: -27px; padding-top: 5px;">+91</span>
                                                             </label>
                                                             <div class="col-sm-7">
-                                                                <input type="text" id="txtAlternateMobileNo" maxlength="10" onkeypress="return isNumberKeyOnly(event);" name="alternate_mobile_no">
+                                                                <input type="text" id="txtAlternateMobileNo"
+                                                                    maxlength="10"
+                                                                    onkeypress="return isNumberKeyOnly(event);"
+                                                                    name="alternate_mobile_no">
                                                             </div>
                                                         </div>
                                                         <div id="div_OtherLandline" style="">
@@ -1819,8 +2222,12 @@
                                                                 STD Code with No.:
                                                             </label>
                                                             <div class="col-sm-7">
-                                                                <input type="text" id="txtSTDCode" style="width: 20%;" maxlength="6" onkeypress="return isNumberKeyOnly(event);">&nbsp;&nbsp;
-                                                                <input type="text" id="txtLandlineNo" maxlength="10" onkeypress="return isNumberKeyOnly(event);" style="width: 70%;">
+                                                                <input type="text" id="txtSTDCode" style="width: 20%;"
+                                                                    maxlength="6"
+                                                                    onkeypress="return isNumberKeyOnly(event);">&nbsp;&nbsp;
+                                                                <input type="text" id="txtLandlineNo" maxlength="10"
+                                                                    onkeypress="return isNumberKeyOnly(event);"
+                                                                    style="width: 70%;">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1830,7 +2237,8 @@
                                             <div class="bor1pxSolid" style="padding: 7px;">
                                                 <div class="f11">
                                                     <div class="bgGrey pad4 marT15">
-                                                        <span class="fontDarkRed b f13">DECLARATION :</span> <b class="floatR">Kindly read the declaration carefully and
+                                                        <span class="fontDarkRed b f13">DECLARATION :</span> <b
+                                                            class="floatR">Kindly read the declaration carefully and
                                                             give
                                                             consent on it</b>
                                                     </div>
@@ -1854,23 +2262,35 @@
                                                     class="button"> -->
                                                 <!-- <input type="button" id="btnSave_Old" value="Save &amp; Exit" -->
                                                 <!-- class="button hide"> -->
-                                                <input type="button" id="btnProceed" value="Update" class="button" style="">
-                                                <input type="button" type="submit" value="Register" id="finalSubmit" class=" button">
+                                                <input type="button" id="btnProceed" value="Update" class="button"
+                                                    style="">
+                                                <input type="button" type="submit" value="Register" id="finalSubmit"
+                                                    class=" button">
                                             </div>
                             </form>
                             <script>
                                 // frmMain submit when click on final submit button
-                                $('#finalSubmit').click(function() {
-                                    $('#frmMain').submit();
+                                $('#finalSubmit').click(function () {
+                                    // show candidate_id before submit form
+                                    var candidate_id = $('#candidate_id').val();
+                                    jAlert('Kindly note your <span class="contentGreen b f18">Candidate ID : ' + candidate_id + ' </span>  <br /><br /> An Email & SMS has been sent to your Email ID and Mobile No. with login credentials which are required at the time of login. <br /><br />Your first step of application is completed, Your application is still incomplete, complete Due Steps before Registration closing date.<br /><br />Note: If you have not received E-mail in Inbox, kindly check mail in SPAM folder.', 'Message', function (r) {
+                                        if (r == true) {
+                                            $('#frmMain').submit();
+                                        }
+
+                                    });
+
                                 });
                             </script>
                         </div>
                     </div>
-                    <div class="modal fade" id="divAfterRegistration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal fade" id="divAfterRegistration" tabindex="-1" role="dialog"
+                        aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content" style="width: 701px;">
                                 <div class="">
-                                    <div style="width: 700px; margin: auto; border: 1px solid #ccc; padding: 5px 14px 14px 14px;">
+                                    <div
+                                        style="width: 700px; margin: auto; border: 1px solid #ccc; padding: 5px 14px 14px 14px;">
                                         <p>
                                             <strong>Dear Candidate,</strong><br>
                                             <br>
@@ -1885,7 +2305,8 @@
                                             <br>
                                             Kindly read Advertisement/Instructions carefully, specifically
                                             the instructions related to choice of city for entrance
-                                            examination and the&nbsp;<a href="/Home/UploadImages" target="_blank">procedure of preparing images of
+                                            examination and the&nbsp;<a href="/Home/UploadImages"
+                                                target="_blank">procedure of preparing images of
                                                 Photograph/Signature/Thumb Impression&nbsp;</a>.&nbsp;<br>
                                             <br>
                                             <strong>Complete following steps before closing date(22th
@@ -1898,13 +2319,15 @@
                                             Step 6: Upload Images<br>
                                             Step 7: Print Registration Form.
                                         </p>
-                                        <p>Kindly visit &nbsp;<a href="https://aiimsexams.ac.in/" target="_blank">https://aiimsexams.ac.in</a> &nbsp; and
+                                        <p>Kindly visit &nbsp;<a href="https://aiimsexams.ac.in/"
+                                                target="_blank">https://aiimsexams.ac.in</a> &nbsp; and
                                             login to Recruitment to the posts of(Group - A (Non Faculty),
                                             Group - B &amp; Group - C) - 2019 using your Candidate ID &amp;
                                             Password to complete Application, before Application closing
                                             date. </p>
                                         <p style="text-align: center; margin-top: 10px;">
-                                            <input type="button" value="Proceed" id="btnPopUpProceed" style="background: #3d8bcc; color: #fff; border: none; padding: 5px 10px; border-radius: 5px; font-weight: bold; font-size: 13px; cursor: pointer;">
+                                            <input type="button" value="Proceed" id="btnPopUpProceed"
+                                                style="background: #3d8bcc; color: #fff; border: none; padding: 5px 10px; border-radius: 5px; font-weight: bold; font-size: 13px; cursor: pointer;">
                                         </p>
                                     </div>
                                 </div>

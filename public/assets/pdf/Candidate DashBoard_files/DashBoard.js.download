@@ -1,0 +1,249 @@
+﻿
+$(document).ready(function () {
+    fnGetApplicantById();
+
+    $(document).on('click', "#btnEdit", function () {
+        go("EditRegistration");
+    });
+
+    $(document).on('click', "#btnProceed", function () {
+        go("Qualification");
+    });
+
+    $(document).on('click', "#btnCenterChoiceNew", function () {
+        go("CenterChoiceNew");
+    });
+});
+
+
+
+function SaveLang() {
+
+
+
+    var data =
+    {
+        "LangType": $('input:radio[name=plan]:checked').val(),
+
+    };
+
+    $.ajax({
+        url: '/DashBoard/savelang?LangType=' + data.LangType,
+        data: JSON.stringify(data),
+        type: 'Get',
+        contentType: 'application/json; charset=utf-8',
+        success: function (result) {
+            
+            if (result && result != "error") {
+                var dsJson = $.parseJSON(result.ds)[0];
+                debugger
+                if (dsJson.res == 1) {
+                    jAlert('<span class="alert-success b f18">Language Saved Successfully!! </span>', 'Message');
+
+                    $("#exampleModal .close").click()
+                }
+                else if (dsJson.res == 2) {
+                    jAlert('<span class="alert-success b f18">Language Updated Successfully!!</span>', 'Message');
+
+                    $("#exampleModal .close").click()
+                }
+            }
+
+        }
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+function fnGetApplicantById() {
+    overlay_disable("dvWrapper", "divDisabled");
+    $.post(appPath + "/DashBoard/GetApplicantById", function (result) {
+        if (result && result != "error") {
+            var studentJson = $.parseJSON(result.StudentDetails)[0];
+             
+            fnChangeStatus(studentJson.SetupCounter, studentJson.RejectionStatus, studentJson.IsReOpen);
+            fnRejectionStatus(studentJson.RejectionStatus, result.RejectionStatus, studentJson.SetupCounter, studentJson.IsReupload, studentJson.PostId, result.Tag);
+            //fnRejectionStatus(RejectionStatus.Tag, result.RejectionStatus, studentJson.SetupCounter, studentJson.IsReupload, studentJson.PostId);
+            if (studentJson.AppliedPostId == "16" || studentJson.AppliedPostId == "42" || studentJson.AppliedPostId == "22" || studentJson.AppliedPostId == "30") {
+                $("#divCenterChoiceNew").show();
+            }
+            else
+                $("#divCenterChoiceNew").hide();
+
+            //------ lang 
+            if (studentJson.AppliedPostId == "60" && studentJson.rlno > 0) {
+
+                $("#divlanguage").show();
+            } else {
+                $("#divlanguage").hide();
+
+            }
+            $("input:radio[name=plan][value=" + studentJson.langType + "]").attr('checked', true);
+
+
+            /*langType*/
+            //------ lang 
+
+            if (studentJson.offerletter != null) {
+                $("#divDVL").show();
+            }
+            else {
+
+                $("#divDVL").hide();
+            }
+            if (studentJson.offerletterV2 != null) {
+                $("#divDVLV2").show();
+            }
+            else {
+
+                $("#divDVLV2").hide();
+            }
+
+            $('#hdnStudentId').val(result.studentId);
+
+            $("#lblFormNo").text(studentJson.ApplicationNo);
+            $("#lblCourseApplied").text(studentJson.AppliedPost);
+            $("#lblUserName").text(studentJson.Name);
+            $("#lblFathersName").text(studentJson.FatherName);
+            $("#lblMotherName").text(studentJson.MotherName);
+            $("#lblDOB").text(studentJson.DOB);
+            $("#lblGender").text(studentJson.Gender);
+
+            if (studentJson.GroupId==37) {
+                $("#UploadCertificate").show();
+            }
+
+            if (studentJson.FinalStatus == 'Accepted') {
+                $("#dvRejectionStatus1").addClass("alert-success").html('<strong>Your Application Form is Provisionally Accepted.</strong>').show();
+            } else if (studentJson.FinalStatus == 'Duplicate') {
+                $("#dvRejectionStatus1").addClass("alert-danger").html('<strong>Duplicate Application form.</strong>').show();
+            }
+            $("#lblIDproof").text(studentJson.IDProofType);
+            $("#lblidno").text(studentJson.IDNo);
+            $("#lblPlaceofIssue").text(studentJson.IssuedPlace);
+            $("#lblIssueDate").text(studentJson.IssuedDate);
+            $("#lblValidTill").text(studentJson.ValidTill);
+
+            $("#lblCategory").text(studentJson.Category);
+            if (studentJson.Category != "General") {
+                $("#tr_certificate").show;
+                $("#lblCertificateNo").text(studentJson.CategoryCertificateNo);
+                $("#lblCertificateDate").text(studentJson.CertificateIssueDate);
+            }
+            else {
+                $("#tr_certificate").hide();
+                $("#lblCertificateNo").text('');
+                $("#lblCertificateDate").text('');
+            }
+
+            $("#lblNationality").text(studentJson.Nationality);
+            $("#IsOPH").text(studentJson.IsOPH);
+            if (studentJson.IsOPH == "Yes") {
+                //$("#divDisabilityPercent").show();
+                $("#lblPWDType").text(studentJson.OPHType);
+                $("#lblDisabilityPercent").text(studentJson.DisabilityPercent);
+            }
+            else {
+                $("#divDisabilityPercent").hide();
+                $("#lblPWDType").text('');
+                $("#lblDisabilityPercent").text('');
+            }
+
+            $("#lblEmailID").text(studentJson.Email);
+            $("#lblMobileNo").text(studentJson.MobileNo);
+            $("#lblAlternateMobileNo").text(studentJson.IsAlternateNo);
+            if (studentJson.IsAlternateNo != "No") {
+                if (studentJson.IsAlternateNo == "Landline") {
+                    $("#div_OtherMobileNo").hide();
+                    $("#div_OtherLandline").show();
+                    $("#lblStdNo").text(studentJson.StdNo);
+                    $("#lblContactNo").text(studentJson.ContactNo);
+                }
+                else if (studentJson.IsAlternateNo == "Mobile") {
+                    $("#div_OtherMobileNo").show();
+                    $("#div_OtherLandline").hide();
+                    $("#lblStdNo,#lblContactNo").text('');
+                    $("#lblOtherMobileNo").text(studentJson.ContactNo);
+                }
+            }
+            else {
+                $("#tr_AlternateMobileNo").hide();
+                $("#lblStdNo,#lblContactNo").text('');
+            }
+        }
+        else {
+            jAlert("Your action could not be completed due to an exception.");
+        }
+
+        overlay_enabled("divDisabled");
+    });
+
+    overlay_enabled("divDisabled");
+}
+
+function fnRejectionStatus(rStatus, statusdetails, setupCounter, IsReupload, AppliedPostId, Tag) {
+     
+    if (statusdetails != 'noData') {
+        var sjson = $.parseJSON(statusdetails);
+        //if (sjson[0].Tag > 0 && (AppliedPostId == 7 || AppliedPostId == 8 || AppliedPostId == 12 || AppliedPostId == 16 || AppliedPostId == 18)) {
+        //if (sjson[0].Tag > 0) {
+
+        //if (sjson[0].Tag == 6) {
+        //    $("#dvRejectionStatus").addClass("alert-danger").html('<strong>Thanks for Re-upload Your application form is Under Review.</strong> ').show();
+        //}
+        //else if (sjson[0].Tag == 1) {
+        //    $("#dvRejectionStatus").addClass("alert-success").html('<strong>Your Application Form is Provisionally Accepted.</strong>').show();
+        //}
+        //else if (sjson[0].Tag == 4) {
+        //    $("#dvRejectionStatus").addClass("alert-danger").html('<strong>Duplicate Application form.</strong>').show();
+        //}
+        //    //else if ((sjson[0].tag == 3)) {
+        //    //    var sjson = $.parsejson(statusdetails);
+        //    //    $("#dvrejectionstatus").addclass("alert-danger").html('<br>' + sjson[0].details + '').show();
+        //    //}
+        //else if ((sjson[0].Tag == 2 || sjson[0].Tag == 5)) {
+        //    var sjson = $.parseJSON(statusdetails);
+        //    $("#dvRejectionStatus").addClass("alert-danger").html('<strong>your registration is rejected due to:</strong> <br>' + sjson[0].Details + '').show();
+        //}
+         
+        if (sjson.length > 0) {
+            if (sjson[0].Tag == "3") {
+                 
+                var oDetails = "", isPhoto = 0, isSign = 0, isThumb = 0, isImages = 0, isAge = 0, isExp = 0, isQual = 0, isPayment = 0;
+                var sdetails = '<ul style="margin-top: 15px; line-height: 20px;">';
+                $.each(sjson, function (i, v) {
+                    sdetails += '<li>' + v.Details + '</li>';
+                    if (v.Tag == 'P') isPhoto++;
+                    if (v.Tag == 'S') isSign++;
+                    if (v.Tag == 'T') isThumb++;
+                    if (v.Tag == 'I') isImages++;
+                    if (v.Tag == 'A') isAge++;
+                    if (v.Tag == 'E') isExp++;
+                    if (v.Tag == 'Q') isQual++;
+                    if (v.Tag == 'RP') isPayment++;
+                });
+                sdetails += '</ul>';
+                //oDetails += 'We regret to inform that the image/s uploaded by you is/are not as per the instructions :-</b>';
+                oDetails += 'We regret to inform that the application form has been rejected due to following reason :-</b>';
+
+                $("#dvRejectionStatus1").addClass("alert-danger").html('<br> <strong>' + oDetails + '</strong> <br>' + sdetails + ' ' + '<br> ').show();
+
+            }
+            else if (sjson[0].Tag == "1") {
+                $("#dvRejectionStatus1").addClass("alert-success").html('<strong>Your Application Form is Provisionally Accepted.</strong>').show();
+
+            }
+        }
+        else {
+            $("#dvRejectionStatus1").html('').hide();
+        }
+    }
+}
